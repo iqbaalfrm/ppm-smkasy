@@ -109,7 +109,11 @@ h6 {
 }
 
 #header .logo {
+<<<<<<< HEAD
   font-size: 10px;
+=======
+  font-size: 25px;
+>>>>>>> 1fb426549a823a4cd5db5e8890096e888fbc5655
   margin: 0;
   padding: 0;
   font-weight: 400;
@@ -118,7 +122,7 @@ h6 {
 }
 
 #header .logo a {
-  color: #413e66;
+  color: #0d5114;
 }
 
 #header .logo img {
@@ -155,7 +159,7 @@ h6 {
 
 @media (max-width: 992px) {
   #header .logo {
-    font-size: 28px;
+    font-size: 15px;
   }
 }
 
