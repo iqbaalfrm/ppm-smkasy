@@ -109,11 +109,7 @@ h6 {
 }
 
 #header .logo {
-<<<<<<< HEAD
-  font-size: 10px;
-=======
-  font-size: 25px;
->>>>>>> 1fb426549a823a4cd5db5e8890096e888fbc5655
+  font-size: 20px;
   margin: 0;
   padding: 0;
   font-weight: 400;
@@ -402,7 +398,7 @@ h6 {
   width: 100%;
   height: 100vh;
   position: relative;
-  background: #b3fcbf url("../img/intro-bg.jpg") center top no-repeat;
+  background: #b3fcbf url("../img/bg5.png") center top no-repeat;
   background-size: cover;
   padding-top: 110px;
 }
@@ -505,6 +501,10 @@ section {
   .section-header p {
     width: 100%;
   }
+}
+
+.btn{
+  
 }
 
 /* Section with background
