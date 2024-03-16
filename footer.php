@@ -62,14 +62,6 @@
           </div>
 
           <div class="col-lg-6">
-              <div class="row w-100">
-                <div class="col-lg-6 my-4">
-                  <h3>Lokasi Kami</h3>
-                </div>
-                <div class="col-lg-6 my-4 d-flex align-items-center">
-                  </div>
-              </div>
-              
 
             </div>
 

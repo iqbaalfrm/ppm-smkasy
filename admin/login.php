@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Halaman Login</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+  <title>Halaman Login</title>
+  <style>
+    .divider:after,
+    .divider:before {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #eee;
+    }
+    
+    .h-custom {
+      height: calc(100% - 73px);
+    }
+    
+    @media (max-width: 450px) {
+      .h-custom {
+        height: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
-	<?php if (isset($_GET["pesan"])) {
+  <?php if (isset($_GET["pesan"])) {
    if ($_GET["pesan"] == "gagal") {
      echo "<div class='alert'>Username dan Password tidak sesuai!</div>";
    } elseif ($_GET["pesan"] == "logout") {
@@ -14,8 +32,8 @@
      echo "<div class='alert'>Anda belum login!</div>";
    }
  } ?>
-	<br><br>
-	<div class="kotak_login">
+  <br><br>
+  <div class="kotak_login">
 		<center><h2>Halaman Login</h2></center><hr>
 		<p class="tulisan_login">Silahkan Login</p>
 		<form action="cek_login.php" method="post">

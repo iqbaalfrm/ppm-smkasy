@@ -86,7 +86,7 @@
     
             <!-- Menu Ekstrakulikuler -->
             <li class="nav-item">
-                <a href="data_siswa.php" class="nav-link">
+                <a href="ekstra.php" class="nav-link">
                     <i class="fa-solid fa-users"></i>
                     <span class="menu-text">Ekstrakulikuler</span>
                 </a>
