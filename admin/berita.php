@@ -1,9 +1,17 @@
+<?php
+  session_start();
+  if (!isset($_SESSION["level"]) || empty($_SESSION["level"])) {
+    header("location:../../index.php?pesan=alert");
+    exit(); // penting untuk menghentikan eksekusi kode setelah header
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin | Data User</title>
+  <title>Admin | Berita</title>
   <style>
     .brand-link {
       display: block;
@@ -23,14 +31,22 @@
       margin-left: 10px; /* Sesuaikan jarak sesuai kebutuhan */
     }
 
-  </style>
-  <?php
-    session_start();
-    if ($_SESSION["level"] == "") {
-      header("location:../../index.php?pesan=alert");
+    table {
+      border-collapse: collapse;
+      width: 100%;
     }
-  ?>
 
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+  </style>
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -88,39 +104,37 @@
       <div class="container-fluid">
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">DataTable with default features</h3>
+            <h3 class="card-title">Daftar Berita</h3>
           </div>
           <!-- /.card-header -->
-          <div class="card-body">
-            <a href="tambah/form_simpan_data_siswa.php"><button class="tombol_tambah">Tambah Data</button></a>
-            <table id="example1" class="table table-bordered table-striped">
-              <thead>
-                <tr>
-                <th>Id</th>
-<th>Username</th>
-<th>Nama</th>
-<th>Aksi</th>
-</tr>
-</thead>
-<tbody>
-<?php
-include "koneksi.php";
-$sql = mysqli_query($koneksi, "SELECT * FROM user");
+          <p style="font-size: 15pt; margin: 10px 0 10px 0;"></p>
+          <a href="tambah/form_simpan_berita.php"><button class="tombol_tambah" style="margin-bottom: 10px;">Tambah Data</button></a>
+          <table>
+            <tr>
+              <th width="30">Id</th>
+              <th width="200">Judul</th>
+              <th width="150">Tanggal</th>
+              <th>Deskripsi</th>
+              <th>Gambar</th>
+              <th colspan="2">Aksi</th>
+            </tr>
+            <?php
+              include "koneksi.php";
+              $sql = mysqli_query($koneksi, "SELECT * FROM berita ORDER BY tanggal DESC");
 
-while ($data = mysqli_fetch_array($sql)) : ?>
-<tr>
-    <td><?= $data["id"] ?></td>
-    <td><?= $data["username"] ?></td>
-    <td><?= $data["nama"] ?></td>
-    <td>
-        <a href="ubah/form_ubah_user.php?id=<?= $data["id"] ?>"><button class="tombol_ubah">Ubah</button></a>
-        <a href="hapus/proses_hapus_user.php?id=<?= $data["id"] ?>"><button class="tombol_hapus">Hapus</button></a>
-    </td>
-</tr>
-<?php endwhile; ?>
-</tbody>
-</table>
-          </div>
+              while ($data = mysqli_fetch_array($sql)): ?>
+                <tr>
+                  <!-- <td align="center"><img src="images/<?= $data["foto"] ?>" width=100></td> -->
+                  <td><?= $data["id"] ?></td>
+                  <td><?= $data["judul"] ?></td>
+                  <td><?= $data["tanggal"] ?></td>
+                  <td><?= $data["deskripsi"] ?></td>
+                  <td><img src="../images/<?= $data["gambar"] ?>" height=80></td>
+                  <td><a href="ubah/berita_ubah.php?id=<?= $data["id"] ?> "><button type="button" class="btn btn-block btn-primary btn-lg">Ubah</button></a></td>
+                  <td><a href="hapus/proses_hapus_berita.php?id=<?= $data["id"] ?> "><button type="button" class="btn btn-block btn-danger btn-lg">Hapus</button></a></td>
+                </tr>
+            <?php endwhile; ?>
+          </table>
           <!-- /.card-body -->
         </div>
         <!-- /.card -->
@@ -133,6 +147,7 @@ while ($data = mysqli_fetch_array($sql)) : ?>
 
   <!-- Main Footer -->
   <?php include('arch/footer.php'); ?>
+</div>
 <!-- ./wrapper -->
 
 <!-- jQuery -->

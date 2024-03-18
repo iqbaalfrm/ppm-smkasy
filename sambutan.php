@@ -11,10 +11,16 @@
 
     <div class="col-lg-7 col-md-6">
       <div class="sambutan-content" data-aos="fade-left" data-aos-delay="100">
-        <h2>Sambutan Kepala Sekolah</h2>
-        <h3>Odio sed id eos et laboriosam consequatur eos earum soluta.</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <p>Aut dolor id. Sint aliquam consequatur ex ex labore. Et quis qui dolor nulla dolores neque. Aspernatur consectetur omnis numquam quaerat. Sed fugiat nisi. Officiis veniam molestiae. Et vel ut quidem alias veritatis repudiandae ut fugit. Est ut eligendi aspernatur nulla voluptates veniam iusto vel quisquam. Fugit ut maxime incidunt accusantium totam repellendus eum error. Et repudiandae eum iste qui et ut ab alias.</p>
+      <?php
+              include "koneksi.php";
+              $sambutan = mysqli_query(
+                $koneksi,
+                "SELECT * FROM sambutan",
+              );
+              $data = mysqli_fetch_array($sambutan);
+              ?>
+      <h1>Sambutan Kepala Sekolah</h1>
+      <?= $data["sambutan"] ?>
         <ul>
           <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
           <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>

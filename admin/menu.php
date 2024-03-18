@@ -94,7 +94,7 @@
     
             <!-- Menu Berita -->
             <li class="nav-item">
-                <a href="index.php" class="nav-link">
+                <a href="berita.php" class="nav-link">
                     <i class="fa-regular fa-newspaper"></i>
                     <span class="menu-text">Berita</span>
                 </a>

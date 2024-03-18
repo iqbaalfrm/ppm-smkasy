@@ -52,7 +52,37 @@
     <!-- End Why Us Section -->
 
     <!-- ======= Disini nanti apa terserah ======= -->
-    <!-- Your Disini nanti apa terserah content goes here -->
+    <section class="latest_news_area p_120" id="berita">
+          <div class="container">
+            <div class="main_title2">
+              <center><h2>Berita</h2></center>
+            </div>
+            <div class="latest_news_inner row">
+              <?php
+              include "koneksi.php";
+              $sql = mysqli_query(
+                $koneksi,
+                "SELECT * FROM berita ORDER BY tanggal DESC",
+              );
+              while ($data = mysqli_fetch_array($sql)): ?>
+              <div class="col-lg-4">
+                <div class="l_news_item">
+                  <a class="date" href="#"><?= $data["tanggal"] ?></a>
+                  <a href="#"><img src="login/dashboard/images/<?= $data[
+                    "gambar"
+                  ] ?>" width="320" height="231">
+                    <h4><?= $data["judul"] ?></h4></a><p>
+                    <?= $data[
+                      "deskripsi"
+                    ] ?>
+                  </p>
+                </div>
+              </div>
+              <?php endwhile;
+              ?>
+            </div>
+          </div>
+        </section>
     <!--  End Disini nanti apa terserah -->
 
     <!-- ======= Disini nanti apa terserah ======= -->
@@ -71,7 +101,7 @@
   <!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <?php include('footer.php');?>
+  <?php include('footer.php'); ?>
   <!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

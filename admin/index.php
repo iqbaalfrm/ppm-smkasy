@@ -91,7 +91,7 @@
       </div>
 
       <!-- Sidebar Menu -->
-      <?php include('arch/menu.php');?>
+      <?php include('menu.php');?>
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->

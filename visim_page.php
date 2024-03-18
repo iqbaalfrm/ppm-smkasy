@@ -31,9 +31,9 @@
       <div class="container">
         <ol>
           <li><a href="index.html">Beranda</a></li>
-          <li>Tentang RPL</li>
+          <li>Visi & Misi</li>
         </ol>
-        <h2>Rekayasa Perangkat Lunak</h2>
+        <h2>Visi & Misi</h2>
       </div>
     </section>
     <!-- End Breadcrumbs -->
