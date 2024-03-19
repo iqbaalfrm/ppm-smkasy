@@ -39,7 +39,7 @@
 
   <main id="main">
 
-    <!-- ======= sambutan Section ======= -->
+    <!-- ======= Sambutan Section ======= -->
     <?php include('sambutan.php');?>
     <!-- End sambutan Section -->
 
