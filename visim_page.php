@@ -43,7 +43,7 @@
     <!-- End Portfolio Details Section -->
 
     <!-- Clients Section -->
-    <?php include('klien.php');?>
+    <?php include('sections/klien.php');?>
     <!-- End Clients Section -->
   </main>
 
