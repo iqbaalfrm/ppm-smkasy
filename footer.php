@@ -8,10 +8,13 @@
 
             <div class="row">
 
-              <div class="col-sm-6">
-
+              <div class="col-sm-2">
+                  <img class="img-fluid" src="assets/img/logo.png" alt= "">
+              </div>
+              <div class="col-sm-10">
+                
                 <div class="footer-info">
-                  <h3>Rapid</h3>
+                  <h3>SMK ASY-SYAMSURIYYAH</h3>
                   <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
                 </div>
 
@@ -73,7 +76,7 @@
     </div>
     <div class="container">
       <div class="copyright">
-       2024 &copy; Copyright <strong>PPM 12 PHB</strong>. All Rights Reserved.
+      Copyright &copy;2024 <strong>PPM 12 PHB</strong>. All Rights Reserved.
       </div>
       <div class="credits">
       </div>
