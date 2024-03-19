@@ -25,9 +25,9 @@
               <li class="dropdown">
                 <a href="#"><span>Profil Jurusan</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
-                  <li><a href="tkr.html">Teknik Kendaraan Ringan</a></li>
-                  <li><a href="rpl.html">Rekayasa Perangkat Lunak</a></li>
-                  <li><a href="mm.html">Multimedia</a></li>
+                  <li><a href="tkr.php">Teknik Kendaraan Ringan</a></li>
+                  <li><a href="rpl.php">Rekayasa Perangkat Lunak</a></li>
+                  <li><a href="mm.php">Desain Komunikasi Visual</a></li>
                 </ul>
               </li>
               <li><a href="#">Ekstrakurikuler</a></li>
