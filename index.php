@@ -34,21 +34,21 @@
   <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <?php include('hero.php');?>
+  <?php include('sections/hero.php');?>
   <!-- End Hero -->
 
   <main id="main">
 
     <!-- ======= Sambutan Section ======= -->
-    <?php include('sambutan.php');?>
+    <?php include('sections/sambutan.php');?>
     <!-- End sambutan Section -->
 
     <!-- ======= Services Section ======= -->
-    <?php include('jurusan_index.php');?>
+    <?php include('sections/jurusan_index.php');?>
     <!-- End Services Section -->
 
     <!-- ======= Why Us Section ======= -->
-    <?php include('kenapa_kami.php');?>
+    <?php include('sections/kenapa_kami.php');?>
     <!-- End Why Us Section -->
 
     <!-- ======= Disini nanti apa terserah ======= -->
@@ -90,11 +90,11 @@
     <!-- End Disini nanti apa terserah -->
 
     <!-- ======= alumni Section ======= -->
-    <?php include('alumni.php');?>
+    <?php include('sections/alumni.php');?>
     <!-- End alumni Section -->
 
     <!-- ======= Clients Section ======= -->
-    <?php include('klien.php');?>
+    <?php include('sections/klien.php');?>
     <!-- End Clients Section -->
 
   </main>
