@@ -24,10 +24,6 @@
 
   <main id="main">
 
-    <!-- ======= Sambutan Section ======= -->
-    <?php include('sections/sambutan.php');?>
-    <!-- End sambutan Section -->
-
     <!-- ======= Services Section ======= -->
     <?php include('sections/jurusan_index.php');?>
     <!-- End Services Section -->
