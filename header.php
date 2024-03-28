@@ -16,7 +16,7 @@
               <li><a href="#">Struktur Organisasi</a></li>
               <li><a href="#">Akreditasi</a></li>
               <li><a href="#">Sarana & Prasarana</a></li>
-              <li><a href="#">Prestasi</a></li>
+              <li><a href="sections\prestasi.php">Prestasi</a></li>
             </ul>
           </li>
           <li class="dropdown">
