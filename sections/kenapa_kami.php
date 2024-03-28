@@ -1,7 +1,7 @@
 <section id="why-us" class="why-us">
       <div class="container-fluid" data-aos="fade-up">
 
-        <header class="section-header">
+        <!-- <header class="section-header">
           <h3>Kenapa Memilih Kami?</h3>
           <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
         </header>
@@ -44,34 +44,38 @@
 
             </div>
 
-          </div>
+          </div> -->
 
         </div>
 
       </div>
 
       <div class="container">
-        <div class="row counters" data-aos="fade-up" data-aos-delay="100">
+  <div class="row counters justify-content-center" data-aos="fade-up" data-aos-delay="100">
 
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Clients</p>
-          </div>
+    <div class="col-lg-3 col-6 text-center">
+      <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+      <p>Jumlah Siswa</p>
+    </div>
 
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="421" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Projects</p>
-          </div>
+    <div class="col-lg-3 col-6 text-center">
+      <span data-purecounter-start="0" data-purecounter-end="421" data-purecounter-duration="1" class="purecounter"></span>
+      <p>Jumlah Tenaga Pendidik</p>
+    </div>
 
-          <div class="col-lg-3 col-6 text-center">
-            <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-            <p>Hours Of Support</p>
-          </div>
+    <div class="col-lg-3 col-6 text-center">
+      <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
+      <p>Jumlah Prestasi yang Diperoleh</p>
+    </div>
 
-          <div class="col-lg-3 col-6 text-center">
+  </div>
+</div>
+
+
+          <!-- <div class="col-lg-3 col-6 text-center">
             <span data-purecounter-start="0" data-purecounter-end="48" data-purecounter-duration="1" class="purecounter"></span>
             <p>Hard Workers</p>
-          </div>
+          </div> -->
 
         </div>
 
