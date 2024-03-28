@@ -56,15 +56,18 @@
   margin-bottom: 0;
 }
 
+.recent-posts .section-header{
+  justify
+}
+
 </style>
 
 <!-- ======= Recent Blog Posts Section ======= -->
 <section id="recent-posts" class="recent-posts sections-bg">
       <div class="container" data-aos="fade-up">
 
-        <div class="section-header">
-          <h2>Recent Blog Posts</h2>
-          <p>Consequatur libero assumenda est voluptatem est quidem illum et officia imilique qui vel architecto accusamus fugit aut qui distinctio</p>
+        <div class="section-header text-center">
+          <h3>Berita Terbaru</h3>
         </div>
 
         <div class="row gy-4">
