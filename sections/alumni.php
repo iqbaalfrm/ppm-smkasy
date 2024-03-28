@@ -33,8 +33,6 @@
               </div>
             </div>
 
-            <!-- Add more swiper-slide here as needed -->
-
           </div>
           <!-- Add Pagination -->
           <div class="swiper-pagination"></div>
