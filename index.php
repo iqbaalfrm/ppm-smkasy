@@ -9,22 +9,7 @@
 
   <title>SMK ASY-SYAMSURIYYAH</title>
 
-  <!-- Favicons -->
-  <link href="assets/img/fav2.png" rel="icon">
-  <link href="assets/img/icon-apple.png" rel="icon-apple">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+ <?php include('dependensi.php');?>
 </head>
 
 <body>
@@ -52,37 +37,7 @@
     <!-- End Why Us Section -->
 
     <!-- ======= Disini nanti apa terserah ======= -->
-    <section class="latest_news_area p_120" id="berita">
-          <div class="container">
-            <div class="main_title2">
-              <center><h2>Berita</h2></center>
-            </div>
-            <div class="latest_news_inner row">
-              <?php
-              include "koneksi.php";
-              $sql = mysqli_query(
-                $koneksi,
-                "SELECT * FROM berita ORDER BY tanggal DESC",
-              );
-              while ($data = mysqli_fetch_array($sql)): ?>
-              <div class="col-lg-4">
-                <div class="l_news_item">
-                  <a class="date" href="#"><?= $data["tanggal"] ?></a>
-                  <a href="#"><img src="login/dashboard/images/<?= $data[
-                    "gambar"
-                  ] ?>" width="320" height="231">
-                    <h4><?= $data["judul"] ?></h4></a><p>
-                    <?= $data[
-                      "deskripsi"
-                    ] ?>
-                  </p>
-                </div>
-              </div>
-              <?php endwhile;
-              ?>
-            </div>
-          </div>
-        </section>
+    <?php include('sections/berita-copy.php');?>
     <!--  End Disini nanti apa terserah -->
 
     <!-- ======= Disini nanti apa terserah ======= -->
