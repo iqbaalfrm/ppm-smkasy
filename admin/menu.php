@@ -91,7 +91,7 @@
                     <span class="menu-text">Ekstrakulikuler</span>
                 </a>
             </li>
-    
+        
             <!-- Menu Berita -->
             <li class="nav-item">
                 <a href="berita.php" class="nav-link">
