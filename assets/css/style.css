@@ -290,7 +290,7 @@ h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #413e66;
+  color: #82cd47;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -347,7 +347,7 @@ h6 {
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: #413e66;
+  color: #82cd47;
 }
 
 .navbar-mobile a:hover,
@@ -680,7 +680,7 @@ section {
   }
 }
 
-#why-us .why-us-content .features {
+/* #why-us .why-us-content .features {
   margin: 0 0 15px 0;
   padding: 0;
 }
@@ -694,34 +694,37 @@ section {
   font-size: 24px;
   font-weight: 600;
   margin-left: 56px;
-  color: #413e66;
+  color: #82cd47;
   margin-bottom: 5px;
 }
 
 #why-us .why-us-content .features p {
   font-size: 16px;
   margin-left: 56px;
-  color: #555186;
-}
+  color: #82cd47;
+} */
 
-#why-us .counters {
+#why-us .container {
   padding-top: 40px;
 }
 
-#why-us .counters span {
+#why-us .container span {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 48px;
   display: block;
-  color: #555186;
+  color: #82cd47;
 }
 
-#why-us .counters p {
+#why-us .container p {
   padding: 0;
   margin: 0 0 20px 0;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
-  color: #8a87b6;
+  color: #82cd47;
+}
+#why-us .purecounter {
+  color: #82cd47;
 }
 
 /* Call To Action Section
@@ -800,7 +803,7 @@ section {
   padding: 6px 10px;
   font-size: 16px;
   line-height: 20px;
-  color: #413e66;
+  color: #0d5114;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
 }
@@ -1222,14 +1225,14 @@ section {
 #pricing .card .list-group-item {
   border: 0px;
   padding: 6px;
-  color: #413e66;
+  color: #82cd47;
   font-weight: 300;
 }
 
 #pricing .card h3 {
   font-size: 64px;
   margin-bottom: 0px;
-  color: #535074;
+  color: #82cd47;
 }
 
 #pricing .card h3 .currency {
@@ -1394,7 +1397,7 @@ section {
   padding: 2px 0 2px 0;
   line-height: 1;
   font-family: "Montserrat", sans-serif;
-  color: #413e66;
+  color: #82cd47;
   font-weight: 400;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -1441,7 +1444,7 @@ section {
 #footer .footer-top h4 {
   font-size: 14px;
   font-weight: bold;
-  color: #413e66;
+  color: #82cd47;
   text-transform: uppercase;
   position: relative;
   padding-bottom: 10px;
