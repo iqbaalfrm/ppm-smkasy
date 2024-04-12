@@ -36,7 +36,7 @@
               <li><a href="#">Galeri</a></li>
             </ul>
           </li>
-          <button class="scrollto btn-ppdb round" href="https://drive.google.com/file/d/1331Tf_pzDFVNqXLu-YC7niMCGpIU8ymL/view?usp=sharing">PPDB</button>
+          <button class="scrollto btn-ppdb round" href="https://drive.google.com/file/d/1oXcIG5wu5GhyaMHhxky_piid1QJeVVKp/view?usp=sharing">PPDB</button>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav>
