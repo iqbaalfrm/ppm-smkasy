@@ -26,7 +26,7 @@
                   <li><a href="mm.php">Desain Komunikasi Visual</a></li>
                 </ul>
               </li>
-              <li><a href="#">Ekstrakurikuler</a></li>
+              <li><a href="ekstra.php">Ekstrakurikuler</a></li>
             </ul>
           </li>
           <li class="dropdown">
