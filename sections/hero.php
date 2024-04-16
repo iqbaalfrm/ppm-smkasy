@@ -8,8 +8,8 @@
                 </div>
             </div>
 
-            <div class="col-lg-6 intro-img order-lg-last order-first text-center" data-aos="zoom-out" data-aos-delay="200" style="margin-top: -125px;">
-                <img src="assets/img/Humam.png" alt="" class="img-fluid" style="height: 450px;">
+            <div class="col-lg-6 intro-img order-lg-last order-first text-center" data-aos="zoom-out" data-aos-delay="200" style="margin-top: 0px; margin-bottom: 125px;">
+                <img src="assets/img/Humam.png" alt="" class="img-fluid" style="max-height: 450px;">
             </div>
         </div>
     </div>
