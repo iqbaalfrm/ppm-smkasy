@@ -32,15 +32,18 @@
     }
 
     table {
-      border-collapse: collapse;
-      width: 100%;
-    }
+  border-collapse: collapse;
+  width: 100%; /* Sesuaikan dengan lebar layar */
+}
 
-    th, td {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-    }
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+
+}
+
+
 
     th {
       background-color: #f2f2f2;

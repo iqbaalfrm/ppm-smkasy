@@ -428,6 +428,11 @@ h6 {
   #hero .intro-img {
     width: 80%;
   }
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
 }
 
 @media (min-width: 992px) {
