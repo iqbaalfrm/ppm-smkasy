@@ -8,8 +8,6 @@
   <meta name="keywords" content="">
 
   <title>SMK ASY-SYAMSURIYYAH</title>
-
- <?php include('dependensi.php');?>
 </head>
 
 <body>
