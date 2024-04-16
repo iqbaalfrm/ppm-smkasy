@@ -135,7 +135,7 @@
 }
 
 .contact .php-email-form button[type=submit] {
-  background: var(--color-primary);
+  background: #007bff; /* Ubah warna latar belakang menjadi biru */
   border: 0;
   padding: 14px 45px;
   color: #fff;
@@ -143,9 +143,9 @@
   border-radius: 50px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
-  background: rgba(0, 131, 116, 0.8);
-}
+
+
+
 
 @keyframes animate-loading {
   0% {
@@ -202,12 +202,24 @@
 
   <main id="main">
 
+  <!-- ======= Breadcrumbs ======= -->
+  <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="index.html">Beranda</a></li>
+          <li>Kontak</li>
+        </ol>
+
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
    <!-- ======= Contact Section ======= -->
    <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>Contact</h2>
           <p>Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam porro nihil id ratione ea sunt quis dolorem dolore earum</p>
         </div>
 
