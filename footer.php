@@ -8,45 +8,41 @@
             <a href="index.php" class="logo d-flex align-items-center">
               <img src="assets/img/humam2.png" alt="" style="max-width: 50%; height: auto;">
             </a>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
-            <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            <p><br>SMK Asy Syamsuriyyah adalah Sekolah Menengah Kejuruan berbasis Pesantren di Brebes, Jawa Tengah.</p>
+            <div class="social-links mt-3" style="color: #379237;">
+              <a href="https://www.facebook.com/profile.php?id=100093292711432&mibextid=ZbWKwL" class="facebook"><i class="bi bi-facebook"></i></a>
             </div>
           </div>
 
           <div class="col-lg-2 col-6 footer-links">
-            <h4>Useful Links</h4>
+            <h4>MENU UTAMA</h4>
             <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bi"></i> <a href="index.php">Beranda</a></li>
+              <li><i class="bi"></i> <a href="sections/tentang.php">Tentang Kami</a></li>
+              <li><i class="bi"></i> <a href="#">Galeri</a></li> <!--ini di isi apa?-->
+              <li><i class="bi"></i> <a href="https://drive.google.com/file/d/1oXcIG5wu5GhyaMHhxky_piid1QJeVVKp/view?usp=sharing">PPDB</a></li>
             </ul>
           </div>
 
           <div class="col-lg-2 col-6 footer-links">
-            <h4>Our Services</h4>
+            <h4>KONSENTRASI KEAHLIAN</h4>
             <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bi"></i> <a href="tkr.php">Teknik Kendaraan Ringan</a></li>
+              <li><i class="bi"></i> <a href="rpl.php">Rekayasa Perangkat Lunak</a></li>
+              <li><i class="bi"></i> <a href="mm.php">Desain Komunikasi Visual</a></li>
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
             <h4>Contact Us</h4>
+            <a href="https://maps.app.goo.gl/AuzMWzei5bDg9NLv5" style="color:dimgrey;">
+             Lempeni, Jagalempeni <br>
+             Kec. Wanasari, 52252 <br>
+             Kabupaten Brebes, Jawa Tengah <br><br>
+            </a>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+            <strong>Contact Person:</strong> +62 857 4777 791<br>
+              <strong>Contact Person:</strong> +62 857 0145 379<br>
             </p>
           </div>
         </div>
@@ -55,7 +51,7 @@
 
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <strong><span>FlexStart</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>SMK Asy Syamsuriyyah</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
