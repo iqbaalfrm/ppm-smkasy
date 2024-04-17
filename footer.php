@@ -11,10 +11,10 @@
           <section class="py-4 py-md-5 py-xl-8">
             <div class="container-fluid overflow-hidden">
               <div class="row gy-4 gy-lg-0 justify-content-xl-between">
-                <div class="col-12 col-md-4 col-lg-3 col-xl-2">
-                  <div class="widget">
+                <div class="col-12 col-md-4 col-lg-3 col-xl-3">
+                  <div class="logo">
                     <a href="#!">
-                      <img src="./assets/img/bsb-logo.svg" alt="BootstrapBrain Logo" width="175" height="57">
+                      <img src="./assets/img/humam2.png" class="img-fluid">
                     </a>
                   </div>
                 </div>
