@@ -8,6 +8,8 @@
   <meta name="keywords" content="">
 
   <title>SMK ASY-SYAMSURIYYAH</title>
+
+ <?php include('dependensi.php');?>
 </head>
 
 <body>
@@ -31,7 +33,7 @@
     <!-- End Why Us Section -->
 
     <!-- ======= Disini nanti apa terserah ======= -->
-    <?php include('blog.php');?>
+    <?php include('sections/berit.php');?>
     <!--  End Disini nanti apa terserah -->
 
     <!-- ======= Disini nanti apa terserah ======= -->

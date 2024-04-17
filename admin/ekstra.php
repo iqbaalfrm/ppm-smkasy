@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | DataTables</title>
+  <title>Admin | Ekstrakulikuler</title>
   <style>
     .brand-link {
       display: block;
@@ -75,7 +75,7 @@
       </div>
 
       <!-- Sidebar Menu -->
-      <?php include('arch/menu.php');?>
+      <?php include('menu.php');?>
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
@@ -88,34 +88,30 @@
       <div class="container-fluid">
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">DataTable with default features</h3>
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-            <a href="tambah/form_simpan_data_siswa.php"><button class="tombol_tambah">Tambah Data</button></a>
+            <a href="tambah/ekstra.php"><button class="tombol_tambah">Tambah Data</button></a>
             <table id="example1" class="table table-bordered table-striped">
               <thead>
                 <tr>
-                  <th>Id</th>
+                 
                   <th>Nama</th>
-                  <th>Kelas</th>
-                  <th>Alamat</th>
                   <th>Foto</th>
+                  <th>Deskripsi</th>
                   <th>Aksi</th>
                 </tr>
               </thead>
               <tbody>
                 <?php
                   include "koneksi.php";
-                  $sql = mysqli_query($koneksi, "SELECT * FROM user WHERE level = 'Siswa'");
+                  $sql = mysqli_query($koneksi, "SELECT * FROM ekstrakulikuler");
 
                   while ($data = mysqli_fetch_array($sql)) : ?>
                     <tr>
-                      <td><?= $data["kode"] ?></td>
                       <td><?= $data["nama"] ?></td>
-                      <td><?= $data["kelas"] ?></td>
-                      <td><?= $data["alamat"] ?></td>
                       <td><img src="../images/<?= $data["gambar"] ?>" height="80"></td>
+                      <td><?= $data["deskripsi"] ?></td>
                       <td>
                         <a href="ubah/form_ubah_data_siswa.php?kode=<?= $data["kode"] ?>"><button class="tombol_ubah">Ubah</button></a>
                         <a href="hapus/proses_hapus_data_siswa.php?kode=<?= $data["kode"] ?>"><button class="tombol_hapus">Hapus</button></a>
@@ -123,16 +119,6 @@
                     </tr>
                 <?php endwhile; ?>
               </tbody>
-              <tfoot>
-                <tr>
-                  <th>Id</th>
-                  <th>Nama</th>
-                  <th>Kelas</th>
-                  <th>Alamat</th>
-                  <th>Foto</th>
-                  <th>Aksi</th>
-                </tr>
-              </tfoot>
             </table>
           </div>
           <!-- /.card-body -->

@@ -1,20 +1,14 @@
-<head>
-<?php include('dependensi.php');?>
-</head>
-
 <header id="header" class="fixed-top d-flex align-items-center header-transparent">
     <div class="container d-flex align-items-center">
       
       <h1 class="logo me-auto"><a href="index.php"><img src="assets/img/humam2.png" alt="" class="img-fluid"></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto" href="index.php">Beranda</a></li>
           <li class="dropdown">
             <a href="#"><span>Profil Sekolah</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-             <li><a href="tentang.php">Tentang Kami</a></li>
+              <li><a href="tentang.php">Tentang Kami</a></li>
               <li><a href="prestasi.php">Prestasi</a></li>
               <li><a href="kontak.php">Kontak</a></li>
             </ul>
