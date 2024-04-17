@@ -72,8 +72,8 @@
   <div class="container" data-aos="fade-up">
 
     <div class="section-header">
-      <h2>Berita Terbaru</h2>
-      <p>Consequatur libero assumenda est voluptatem est quidem illum et officia imilique qui vel architecto accusamus fugit aut qui distinctio</p>
+      <h3>Berita Terbaru</h3  >
+      <p>Ikuti terus informasi terbaru tentang SMK Asy Syamsuriyyah.</p>
     </div>
 
     <div class="row gy-4">
