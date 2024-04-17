@@ -231,8 +231,8 @@
               <div class="info-item d-flex">
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
-                  <h4>Location:</h4>
-                  <p>A108 Adam Street, New York, NY 535022</p>
+                  <h4>Lokasi:</h4>
+                  <p>Jalan Raya Pebatan-Rengaspendawa Km 7, Jagalempeni, Kec. Wanasari, Kab. Brebes Prov. Jawa Tengah</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -247,7 +247,7 @@
               <div class="info-item d-flex">
                 <i class="bi bi-phone flex-shrink-0"></i>
                 <div>
-                  <h4>Call:</h4>
+                  <h4>Telepon:</h4>
                   <p>+1 5589 55488 55</p>
                 </div>
               </div><!-- End Info Item -->
@@ -255,8 +255,8 @@
               <div class="info-item d-flex">
                 <i class="bi bi-clock flex-shrink-0"></i>
                 <div>
-                  <h4>Open Hours:</h4>
-                  <p>Mon-Sat: 11AM - 23PM</p>
+                  <h4>Jam Kerja:</h4>
+                  <p>Senin - Sabtu : 07.00 - 14.00</p>
                 </div>
               </div><!-- End Info Item -->
             </div>
