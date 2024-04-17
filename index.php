@@ -33,7 +33,7 @@
     <!-- End Why Us Section -->
 
     <!-- ======= Disini nanti apa terserah ======= -->
-    <?php include('sections/berit.php');?>
+    <?php include('blog.php');?>
     <!--  End Disini nanti apa terserah -->
 
     <!-- ======= Disini nanti apa terserah ======= -->
