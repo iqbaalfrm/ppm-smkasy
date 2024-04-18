@@ -7,6 +7,7 @@
   .recent-posts .section-header {
     margin-bottom: 20px;
     text-align: center;
+    color:#14781e;
   }
 
   .recent-posts article {

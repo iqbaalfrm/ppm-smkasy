@@ -12,8 +12,8 @@
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonial-1.jpg" class="testimonial-img" alt="">
+              <div class="alumni-item">
+                <img src="assets/img/testimonial-1.jpg" class="alumni-img" alt="">
                 <h3>Saul Goodman</h3>
                 <h4>Ceo &amp; Founder</h4>
                 <p>
@@ -23,8 +23,8 @@
             </div>
 
             <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonial-2.jpg" class="testimonial-img" alt="">
+              <div class="alumni-item">
+                <img src="assets/img/testimonial-2.jpg" class="alumni-img" alt="">
                 <h3>Sara Wilsson</h3>
                 <h4>Designer</h4>
                 <p>
@@ -33,6 +33,17 @@
               </div>
             </div>
 
+            <div class="swiper-slide">
+              <div class="alumni-item">
+                <img src="assets/img/testimonial-2.jpg" class="alumni-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+                <p>
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                </p>
+              </div>
+            </div>
+            
           </div>
           <!-- Add Pagination -->
           <div class="swiper-pagination"></div>

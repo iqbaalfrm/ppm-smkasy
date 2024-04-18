@@ -20,6 +20,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <?php include('dependensi.php');?>
 </head>
 
 <body>
