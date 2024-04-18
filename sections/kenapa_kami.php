@@ -8,17 +8,17 @@
 
     <div class="col-lg-3 col-6 text-center">
       <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
-      <p>Jumlah Siswa</p>
+      <p><b>Jumlah Siswa</b></p>
     </div>
 
     <div class="col-lg-3 col-6 text-center">
       <span data-purecounter-start="0" data-purecounter-end="421" data-purecounter-duration="1" class="purecounter"></span>
-      <p>Jumlah Tenaga Pendidik</p>
+      <p><b>Jumlah Tenaga Pendidik</b></p>
     </div>
 
     <div class="col-lg-3 col-6 text-center">
       <span data-purecounter-start="0" data-purecounter-end="1453" data-purecounter-duration="1" class="purecounter"></span>
-      <p>Jumlah Prestasi yang Diperoleh</p>
+      <p><b>Jumlah Prestasi yang Diperoleh</b></p>
     </div>
 
   </div>

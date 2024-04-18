@@ -7,6 +7,7 @@
   .recent-posts .section-header {
     margin-bottom: 20px;
     text-align: center;
+    color:#14781e;
   }
 
   .recent-posts article {
@@ -72,8 +73,8 @@
   <div class="container" data-aos="fade-up">
 
     <div class="section-header">
-      <h2>Berita Terbaru</h2>
-      <p>Consequatur libero assumenda est voluptatem est quidem illum et officia imilique qui vel architecto accusamus fugit aut qui distinctio</p>
+      <h3><b>Berita Terbaru</b></h3>
+      <p>Dapatkan berita terbaru mengenai SMK Asy-Syamsuriyyah</p>
     </div>
 
     <div class="row gy-4">
