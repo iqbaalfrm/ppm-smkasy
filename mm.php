@@ -51,8 +51,8 @@
       <div class="container">
 
         <ol>
-          <li><a href="index.html">Home</a></li>
-          <li>Tentang Desain Komunikasi Visual</li>
+          <li><a href="index.php">Beranda</a></li>
+          <li>Tentang DKV</li>
         </ol>
         <h2>Desain Komunikasi Visual</h2>
 

@@ -959,14 +959,14 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #1bb1dc;
+  border: 1px solid #82cd47;
 }
 
 .portfolio-details
   .portfolio-details-slider
   .swiper-pagination
   .swiper-pagination-bullet-active {
-  background-color: #1bb1dc;
+  background-color: #82cd47;
 }
 
 .portfolio-details .portfolio-info {
@@ -1062,11 +1062,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #1bb1dc;
+  border: 1px solid #82cd47;
 }
 
 #alumni .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #1bb1dc;
+  background-color: #82cd47;
 }
 
 /* Team Section
@@ -1162,11 +1162,11 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #1bb1dc;
+  border: 1px solid #82cd47;
 }
 
 #clients .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #1bb1dc;
+  background-color: #82cd47;
 }
 
 /* Pricing Section
@@ -1431,7 +1431,7 @@ section {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #82cd47;
+  background: #14781e;
   color: #fff;
   margin-right: 4px;
   border-radius: 50%;
@@ -1447,7 +1447,7 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: #0a98c0;
+  background: #82cd47;
   color: #fff;
 }
 
@@ -1460,7 +1460,7 @@ section {
 #footer .footer-top h4 {
   font-size: 14px;
   font-weight: bold;
-  color: #82cd47;
+  color: #14781e;
   text-transform: uppercase;
   position: relative;
   padding-bottom: 10px;
@@ -1489,7 +1489,7 @@ section {
 }
 
 #footer .footer-top .footer-links ul a:hover {
-  color: #1bb1dc;
+  color: #82cd47;
 }
 
 #footer .footer-top .footer-contact {
@@ -1523,7 +1523,7 @@ section {
 }
 
 #footer .footer-top .footer-newsletter input[type="submit"]:hover {
-  background: #0a98c0;
+  background: #82cd47;
 }
 
 #footer .php-email-form .validate {
@@ -1606,7 +1606,7 @@ section {
 }
 
 #footer .php-email-form button[type="submit"]:hover {
-  background: #0a98c0;
+  background: #82cd47;
   cursor: pointer;
 }
 
@@ -1639,5 +1639,5 @@ section {
 }
 
 #footer .credits a:hover {
-  color: #0a98c0;
+  color: #82cd47;
 }

@@ -9,7 +9,7 @@
               <img src="assets/img/humam2.png" alt="" style="max-width: 50%; height: auto;">
             </a>
             <p><br>SMK Asy Syamsuriyyah adalah Sekolah Menengah Kejuruan berbasis Pesantren di Brebes, Jawa Tengah.</p>
-            <div class="social-links mt-3" style="color: #379237;">
+            <div class="social-links mt-3" style="color: #14781e;">
               <a href="https://www.facebook.com/profile.php?id=100093292711432&mibextid=ZbWKwL" class="facebook"><i class="bi bi-facebook"></i></a>
             </div>
           </div>
