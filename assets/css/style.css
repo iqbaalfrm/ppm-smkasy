@@ -509,12 +509,18 @@ section {
 }
 
 .section-header h3 {
-  font-size: 36px;
+  font-size: 32px;
   color: #14781e;
   text-align: center;
   font-weight: 700;
   position: relative;
   font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (max-width: 1023px) {
+  .section-header h3 {
+    font-size: 24px;
+  }
 }
 
 .section-header p {
