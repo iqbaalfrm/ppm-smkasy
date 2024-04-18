@@ -73,8 +73,8 @@
   <div class="container" data-aos="fade-up">
 
     <div class="section-header">
-      <h3><b>Berita Terbaru</b></h3>
-      <p>Dapatkan berita terbaru mengenai SMK Asy-Syamsuriyyah</p>
+      <h3>Berita Terbaru</h3  >
+      <p>Ikuti terus informasi terbaru tentang SMK Asy Syamsuriyyah.</p>
     </div>
 
     <div class="row gy-4">

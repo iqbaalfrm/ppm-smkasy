@@ -48,9 +48,9 @@
             <div class="extracurricular-section">
               <div class="card-deck">
                 <div class="container">
-                  <div class="row">
-                    <?php for ($i = 1; $i <= 3; $i++) { ?>
-                      <div class="col-md-4">
+                  <div class="row mt-4">
+                    <?php for ($i = 1; $i <= 6; $i++) { ?>
+                      <div class="col-md-4 mb-4">
                         <div class="card">
                           <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
                             <img src="assets/img/test.jpeg" class="img-fluid" />

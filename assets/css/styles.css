@@ -3077,7 +3077,7 @@ input[type="button"].btn-block {
 .custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::before {
   background-color: rgba(0, 123, 255, 0.5); }
 
-.custom-switch {
+.custom-ftch {
   padding-left: 2.25rem; }
   .custom-switch .custom-control-label::before {
     left: -2.25rem;

@@ -45,7 +45,7 @@
       <div class="container">
 
         <ol>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.php">Beranda</a></li>
           <li>Tentang TKR</li>
         </ol>
         <h2>TEKNIK KENDARAAN RINGAN</h2>

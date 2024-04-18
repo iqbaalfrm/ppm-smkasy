@@ -52,7 +52,7 @@
       <section id="breadcrumbs" class="breadcrumbs">
         <div class="container">
           <ol>
-            <li><a href="index.html">Beranda</a></li>
+            <li><a href="index.php">Beranda</a></li>
             <li>Tentang RPL</li>
           </ol>
           <h2>Rekayasa Perangkat Lunak</h2>
