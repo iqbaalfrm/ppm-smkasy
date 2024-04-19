@@ -67,7 +67,7 @@ $data = mysqli_fetch_array($sql);
             <div class="card-body">
               <div class="kotak2">
                 <center><h3>Ubah Berita</h3></center>
-                <form method="post" action="proses_simpan_berita.php?id=<?= $id ?>" enctype="multipart/form-data">
+                <form method="post" action="proses_ubah_berita.php?id=<?= $id ?>" enctype="multipart/form-data">
                   <table cellpadding="8" style="width: 100%;">
                     <tr>
                       <td>ID</td>

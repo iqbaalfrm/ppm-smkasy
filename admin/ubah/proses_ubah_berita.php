@@ -9,15 +9,15 @@ if (isset($_POST["ubah_foto"])) {
   $gambar = $_FILES["gambar"]["name"];
   $tmp = $_FILES["gambar"]["tmp_name"];
   $fotobaru = date("dmYHis") . $gambar;
-  $path = "../../images/$fotobaru";
+  $path = "../../dist/img/$fotobaru";
 
   if (move_uploaded_file($tmp, $path)) {
     $query = "SELECT * FROM berita WHERE id = '" . $id . "' ";
     $sql = mysqli_query($koneksi, $query);
     $data = mysqli_fetch_array($sql);
 
-    if (is_file("../images/" . $data["gambar"])) {
-      unlink("../images/" . $data["gambar"]);
+    if (is_file("../../dist/img/" . $data["gambar"])) {
+      unlink("../../dist/img/" . $data["gambar"]);
     }
 
     $query =
