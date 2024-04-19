@@ -58,7 +58,7 @@
     <!-- Menampilkan foto ppdb.jpeg dengan ukuran yang lebih kecil -->
 <!-- Menampilkan foto ppdb.jpeg dengan ukuran yang lebih kecil dan terpusat -->
 <div class="row justify-content-center">
-  <div class="col-lg-8">
+  <div class="col-lg-10">
     <div class="card text-center">
       <img src="assets\img\ppdb.jpeg" class="card-img-top mx-auto" alt="PPDB" style="max-width: 400px; height: auto;">
       <div class="card-body">
