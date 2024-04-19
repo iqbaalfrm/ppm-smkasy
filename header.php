@@ -33,7 +33,7 @@
           <li class="dropdown">
             <a href="#"><span>Media</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-                <a href="#"><span>Berita</span></i></a>
+                <a href="blog-page.php"><span>Berita</span></i></a>
               <li><a href="#">Galeri</a></li>
             </ul>
           </li>

@@ -57,7 +57,7 @@ include "../koneksi.php";
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Page Title</h1>
+            <h1 class="m-0"></h1>
           </div>
           <div class="col-sm-6">
             <!-- Breadcrumb -->
@@ -75,7 +75,7 @@ include "../koneksi.php";
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <h3 class="card-title">Quick Example</h3>
+                <h3 class="card-title">Tambah Ekstrakulikuler</h3>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -87,7 +87,7 @@ include "../koneksi.php";
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Deskripsi</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Masukann Deskripsi">
+                    <input type="description" class="form-control" id="exampleInputPassword1" placeholder="Masukann Deskripsi">
                   </div>
                   <div class="form-group">
                     <label for="exampleInputFile">Upload Gambar</label>

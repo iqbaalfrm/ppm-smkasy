@@ -81,54 +81,55 @@
     <!-- /.sidebar -->
   </aside>
 
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
     <!-- Main content -->
     <div class="content">
-      <div class="container-fluid">
-        <div class="card">
-          <div class="card-header">
-          </div>
-          <!-- /.card-header -->
-          <div class="card-body">
-            <a href="tambah/form_simpan_data_siswa.php"><button class="tombol_tambah">Tambah Data</button></a>
-            <table id="example1" class="table table-bordered table-striped">
-              <thead>
-                <tr>
-                <th>Id</th>
-<th>Username</th>
-<th>Nama</th>
-<th>Aksi</th>
-</tr>
-</thead>
-<tbody>
-<?php
-include "koneksi.php";
-$sql = mysqli_query($koneksi, "SELECT * FROM user");
+        <div class="container-fluid">
+            <div class="card">
+                <div class="card-header">
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body">
+                    <a href="tambah/form_simpan_data_siswa.php"><button class="tombol_tambah">Tambah Data</button></a>
+                    <table id="example1" class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Username</th>
+                                <th>Nama</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                            include "koneksi.php";
+                            $sql = mysqli_query($koneksi, "SELECT * FROM user");
 
-while ($data = mysqli_fetch_array($sql)) : ?>
-<tr>
-    <td><?= $data["id"] ?></td>
-    <td><?= $data["username"] ?></td>
-    <td><?= $data["nama"] ?></td>
-    <td>
-        <a href="ubah/form_ubah_user.php?id=<?= $data["id"] ?>"><button class="tombol_ubah">Ubah</button></a>
-        <a href="hapus/proses_hapus_user.php?id=<?= $data["id"] ?>"><button class="tombol_hapus">Hapus</button></a>
-    </td>
-</tr>
-<?php endwhile; ?>
-</tbody>
-</table>
-          </div>
-          <!-- /.card-body -->
+                            while ($data = mysqli_fetch_array($sql)) : ?>
+                                <tr>
+                                    <td><?= $data["id"] ?></td>
+                                    <td><?= $data["username"] ?></td>
+                                    <td><?= $data["nama"] ?></td>
+                                    <td>
+                                        <a href="ubah/form_ubah_user.php?id=<?= $data["id"] ?>"><button class="tombol_ubah">Ubah</button></a>
+                                        <a href="hapus/proses_hapus_user.php?id=<?= $data["id"] ?>"><button class="tombol_hapus">Hapus</button></a>
+                                    </td>
+                                </tr>
+                            <?php endwhile; ?>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
         </div>
-        <!-- /.card -->
-      </div>
-      <!-- /.container-fluid -->
+        <!-- /.container-fluid -->
     </div>
     <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+</div>
+<!-- /.content-wrapper -->
+
 
   <!-- Main Footer -->
   <?php include('arch/footer.php'); ?>

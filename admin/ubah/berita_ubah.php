@@ -56,50 +56,48 @@ $data = mysqli_fetch_array($sql);
   </aside>
   
   <div class="content-wrapper">
-    <div class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">Daftar Berita</h3>
-              </div>
-              <div class="card-body">
-                <div class="kotak2">
-                  <center><h3>Ubah Berita</h3></center>
-                  <form method="post" action="proses_ubah_berita.php?id=<?= $id ?>" enctype="multipart/form-data">
-                    <table cellpadding="8" style="width: 100%;">
-                      <tr>
-                        <td>ID</td>
-                        <td><input type="text" size="2" name="id" value="<?= $id ?>" readonly></td>
-                      </tr>
-                      <tr>
-                        <td>Judul</td>
-                        <td><input type="text" size="67" name="judul" value="<?= $data["judul"] ?>"></td>
-                      </tr>
-                      <tr>
-                        <td>Tanggal</td>
-                        <td><input type="date" name="tanggal" value="<?= $data["tanggal"] ?>"></td>
-                      </tr>
-                      <tr>
-                        <td valign="top">Deskripsi</td>
-                        <td><textarea name="deskripsi" rows="20" style="resize: vertical; width: 100%;"><?= $data["deskripsi"] ?></textarea></td>
-                      </tr>
-                      <tr>
-                        <td>Gambar</td>
-                        <td>
-                          <input type="checkbox" name="ubah_foto" value="true">Ceklis jika ingin mengubah foto <br>
-                          <input type="file" name="gambar">
-                        </td>
-                      </tr>
-                    </table>
-                    <hr>
-                    <div style="display: flex; justify-content: flex-end;">
-                        <input type="submit" value="Ubah" class="tombol_simpan" style="margin-right: 10px;">
-                        <a href="../berita.php" class="tombol_batal">Batal</a>
-                    </div>
-                  </form>
-                </div>
+  <div class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Daftar Berita</h3>
+            </div>
+            <div class="card-body">
+              <div class="kotak2">
+                <center><h3>Ubah Berita</h3></center>
+                <form method="post" action="proses_simpan_berita.php?id=<?= $id ?>" enctype="multipart/form-data">
+                  <table cellpadding="8" style="width: 100%;">
+                    <tr>
+                      <td>ID</td>
+                      <td><input type="text" size="2" name="id" value="<?= $id ?>" readonly></td>
+                    </tr>
+                    <tr>
+                      <td>Judul</td>
+                      <td><input type="text" size="67" name="judul" value="<?= $data["judul"] ?>"></td>
+                    </tr>
+                    <tr>
+                      <td>Tanggal</td>
+                      <td><input type="date" name="tanggal" value="<?= $data["tanggal"] ?>"></td>
+                    </tr>
+                    <tr>
+                      <td valign="top">Deskripsi</td>
+                      <td><textarea name="deskripsi" rows="20" style="resize: vertical; width: 100%;"><?= $data["deskripsi"] ?></textarea></td>
+                    </tr>
+                    <tr>
+                      <td>Gambar</td>
+                      <td>
+                        <input type="file" name="gambar">
+                      </td>
+                    </tr>
+                  </table>
+                  <hr>
+                  <div style="display: flex; justify-content: flex-end;">
+                    <input type="submit" value="Ubah" class="tombol_simpan" style="margin-right: 10px;">
+                    <a href="../berita.php" class="tombol_batal">Batal</a>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -107,6 +105,8 @@ $data = mysqli_fetch_array($sql);
       </div>
     </div>
   </div>
+</div>
+
   
   <?php include('../arch/footer.php'); ?>
 </div>
