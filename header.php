@@ -34,7 +34,7 @@
             <a href="#"><span>Media</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
                 <a href="blog-page.php"><span>Berita</span></i></a>
-              <li><a href="#">Galeri</a></li>
+              <li><a href="galeri.php">Galeri</a></li>
             </ul>
           </li>
           <button class="scrollto btn-ppdb round" href="https://drive.google.com/file/d/1oXcIG5wu5GhyaMHhxky_piid1QJeVVKp/view?usp=sharing">PPDB</button>
