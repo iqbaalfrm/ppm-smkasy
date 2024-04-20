@@ -7,12 +7,12 @@
   <div class="row counters justify-content-center" data-aos="fade-up" data-aos-delay="100">
 
     <div class="col-lg-3 col-6 text-center">
-      <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+      <span data-purecounter-start="0" data-purecounter-end="301" data-purecounter-duration="1" class="purecounter"></span>
       <p><b>Jumlah Siswa</b></p>
     </div>
 
     <div class="col-lg-3 col-6 text-center">
-      <span data-purecounter-start="0" data-purecounter-end="421" data-purecounter-duration="1" class="purecounter"></span>
+      <span data-purecounter-start="0" data-purecounter-end="40" data-purecounter-duration="1" class="purecounter"></span>
       <p><b>Jumlah Tenaga Pendidik</b></p>
     </div>
 

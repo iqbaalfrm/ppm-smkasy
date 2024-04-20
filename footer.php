@@ -34,7 +34,7 @@
           </div>
 
           <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-            <h4>Contact Us</h4>
+            <h4>Hubungi Kami</h4>
             <a href="https://maps.app.goo.gl/AuzMWzei5bDg9NLv5" style="color:dimgrey;">
              Lempeni, Jagalempeni <br>
              Kec. Wanasari, 52252 <br>
@@ -43,6 +43,7 @@
             <p>
             <strong>Contact Person:</strong> +62 857 4777 791<br>
               <strong>Contact Person:</strong> +62 857 0145 379<br>
+              <strong>Email:</strong>smk.asyamsuriyyah@gmail.com<br>
             </p>
           </div>
         </div>

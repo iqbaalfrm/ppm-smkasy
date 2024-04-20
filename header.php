@@ -4,7 +4,7 @@
 <header id="header" class="fixed-top d-flex align-items-center header-transparent">
     <div class="container d-flex align-items-center">
       
-      <h1 class="logo me-auto"><a href="index.php"><img src="assets/img/humam2.png" alt="" class="img-fluid"></a></h1>
+      <h1 class="logo me-auto"><a href="index.php"><img src="assets/img/header.png" alt="" class="img-fluid"></a></h1>
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto" href="index.php">Beranda</a></li>
@@ -36,6 +36,10 @@
                 <a href="blog-page.php"><span>Berita</span></i></a>
               <li><a href="galeri.php">Galeri</a></li>
             </ul>
+          </li>
+          <li class="bkk">
+            <a href="bkk.php"><span>BKK</span></a>
+          
           </li>
           <button class="scrollto btn-ppdb round" onclick="window.location.href='ppdb.php'">PPDB</button>
         </ul>
