@@ -111,7 +111,7 @@
             while ($row = mysqli_fetch_assoc($result)) {
                 $judul = $row['judul'];
                 $tanggal = $row['tanggal'];
-                $gambar = $row['gambar'];
+                $gambar = "assets/img/paskib.jpeg"; // Path gambar dari lokal
                 $deskripsi = $row['deskripsi'];
 
                 echo "<div class='col-xl-4 col-md-4'>";
