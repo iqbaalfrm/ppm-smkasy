@@ -24,6 +24,10 @@
 
   <main id="main">
 
+    <!-- ======= Unggulan Section ======= -->
+    <?php include('sections/pesantren.php'); ?>
+    <!-- End Unggulan Section -->
+
     <!-- ======= Services Section ======= -->
     <?php include('sections/jurusan_index.php');?>
     <!-- End Services Section -->

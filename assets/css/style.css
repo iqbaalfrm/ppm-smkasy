@@ -516,6 +516,15 @@ section {
   font-family: "Montserrat", sans-serif;
 }
 
+.section-header2 h3{
+  font-size: 32px;
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+}
+
 @media screen and (max-width: 1023px) {
   .section-header h3 {
     font-size: 24px;
@@ -542,6 +551,7 @@ section {
 .section-bg {
   background: #f5f8fd;
 }
+
 /* About Us Section */
 --------------------------------------------------------------*/
   .about
