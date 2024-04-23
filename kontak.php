@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
   <style>
     .contact .info-container {
   background-color: var(--color-primary);
@@ -165,7 +166,7 @@
   </title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
+  <?php include('dependensi.php');?>
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -182,6 +183,8 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+  
 
   <!-- =======================================================
   * Template Name: Rapid

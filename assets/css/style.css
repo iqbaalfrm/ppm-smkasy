@@ -516,7 +516,7 @@ section {
   font-family: "Montserrat", sans-serif;
 }
 
-.section-header2 h3{
+.section-header2 h3 {
   font-size: 32px;
   color: white;
   text-align: center;
@@ -1179,74 +1179,6 @@ section {
   background-color: #82cd47;
 }
 
-/* Team Section
---------------------------------*/
-#team {
-  padding: 60px 0;
-}
-
-#team .member {
-  text-align: center;
-  margin-bottom: 20px;
-  position: relative;
-  overflow: hidden;
-}
-
-#team .member .member-info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  transition: 0.2s;
-  padding: 15px 0;
-  background: rgba(29, 28, 41, 0.6);
-}
-
-#team .member .member-info-content {
-  transition: margin 0.2s;
-  height: 36px;
-  transition: height 0.4s;
-}
-
-#team .member:hover .member-info {
-  transition: 0.4s;
-}
-
-#team .member:hover .member-info-content {
-  height: 70px;
-}
-
-#team .member h4 {
-  font-weight: 700;
-  margin-bottom: 2px;
-  font-size: 18px;
-  color: #fff;
-}
-
-#team .member span {
-  font-style: italic;
-  display: block;
-  font-size: 13px;
-  color: #fff;
-}
-
-#team .member .social a {
-  transition: none;
-  color: #fff;
-}
-
-#team .member .social a:hover {
-  color: #1bb1dc;
-}
-
-#team .member .social i {
-  font-size: 18px;
-  margin: 0 2px;
-}
-
 /* Clients Section
 --------------------------------*/
 #clients {
@@ -1506,7 +1438,6 @@ section {
 #footer .logo img {
   max-height: 60px;
 }
-
 
 #footer .footer-top {
   padding: 60px 0 30px 0;

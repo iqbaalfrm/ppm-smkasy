@@ -10,6 +10,7 @@ $id = $_GET["id"];
 $query = "SELECT * FROM berita WHERE id='$id' ";
 $sql = mysqli_query($koneksi, $query);
 $data = mysqli_fetch_array($sql);
+
 ?>
 
 <!DOCTYPE html>
@@ -54,7 +55,7 @@ $data = mysqli_fetch_array($sql);
       <?php include('menu.php');?>
     </div>
   </aside>
-  
+
   <div class="content-wrapper">
   <div class="content">
     <div class="container-fluid">
@@ -107,7 +108,7 @@ $data = mysqli_fetch_array($sql);
   </div>
 </div>
 
-  
+
   <?php include('../arch/footer.php'); ?>
 </div>
 
