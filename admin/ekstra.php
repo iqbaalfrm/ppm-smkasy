@@ -1,9 +1,24 @@
+
+<?php
+session_start();
+if (!isset($_SESSION["level"]) || empty($_SESSION["level"])) {
+  header("location:../../index.php?pesan=alert");
+  exit(); // penting untuk menghentikan eksekusi kode setelah header
+}
+
+include "../koneksi.php";
+$sql = mysqli_query($koneksi, "SELECT * FROM ekstra ");
+if (!$sql) {
+  die("Query error: " . mysqli_error($koneksi));
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin | Ekstrakulikuler</title>
+  <title>Admin | Prestasi</title>
   <style>
     .brand-link {
       display: block;
@@ -23,14 +38,22 @@
       margin-left: 10px; /* Sesuaikan jarak sesuai kebutuhan */
     }
 
-  </style>
-  <?php
-    session_start();
-    if ($_SESSION["level"] == "") {
-      header("location:../../index.php?pesan=alert");
+    table {
+      border-collapse: collapse;
+      width: 100%; /* Sesuaikan dengan lebar layar */
     }
-  ?>
 
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+  </style>
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -88,40 +111,31 @@
       <div class="container-fluid">
         <div class="card">
           <div class="card-header">
+            <h3 class="card-title">Daftar Ekstrakulikuler</h3>
           </div>
           <!-- /.card-header -->
-          <div class="card-body">
-            <a href="tambah/ekstra.php"><button class="tombol_tambah">Tambah Data</button></a>
-            <table id="example1" class="table table-bordered table-striped">
-              <thead>
+          <p style="font-size: 15pt; margin: 10px 0 10px 0;"></p>
+          <a href="tambah-ekstra.php"><button class="tombol_tambah" style="margin-bottom: 10px;">Tambah Data</button></a>
+          <div class="table-responsive">
+            <table>
+              <tr>
+                <th>Nama</th>
+                <th>Deskripsi</th>
+                <th>Gambar</th>
+                <th colspan="2">Aksi</th>
+              </tr>
+              <?php while ($data = mysqli_fetch_array($sql)) : ?>
                 <tr>
-                 
-                  <th>Nama</th>
-                  <th>Foto</th>
-                  <th>Deskripsi</th>
-                  <th>Aksi</th>
+                  <td><?= $data["nama"] ?></td>
+                  <td><?= $data["deskripsi"] ?></td>
+                  <td><img src="dist/img/uploads/<?= $data['gambar'] ?>" alt="gambar" width="400" height="400"></td>
+                  <td><a href="ubah-ekstra.php?id=<?= $data["id"] ?>"><button type="button" class="btn btn-block btn-primary">Ubah</button></a></td>
+                  <td><a href="hapus-ekstra.php?id=<?= $data["id"] ?>"><button type="button" class="btn btn-block btn-danger">Hapus</button></a></td>
                 </tr>
-              </thead>
-              <tbody>
-                <?php
-                  include "koneksi.php";
-                  $sql = mysqli_query($koneksi, "SELECT * FROM ekstrakulikuler");
-
-                  while ($data = mysqli_fetch_array($sql)) : ?>
-                    <tr>
-                      <td><?= $data["nama"] ?></td>
-                      <td><img src="../images/<?= $data["gambar"] ?>" height="80"></td>
-                      <td><?= $data["deskripsi"] ?></td>
-                      <td>
-                        <a href="ubah/form_ubah_data_siswa.php?kode=<?= $data["kode"] ?>"><button class="tombol_ubah">Ubah</button></a>
-                        <a href="hapus/proses_hapus_data_siswa.php?kode=<?= $data["kode"] ?>"><button class="tombol_hapus">Hapus</button></a>
-                      </td>
-                    </tr>
-                <?php endwhile; ?>
-              </tbody>
+              <?php endwhile; ?>
             </table>
           </div>
-          <!-- /.card-body -->
+          <!-- /.table-responsive -->
         </div>
         <!-- /.card -->
       </div>
@@ -132,12 +146,7 @@
   <!-- /.content-wrapper -->
 
   <!-- Main Footer -->
-  <footer class="main-footer">
-    <div class="float-right d-none d-sm-block">
-      <b>Version</b> 3.2.0
-    </div>
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
-  </footer>
+  <?php include('arch/footer.php'); ?>
 </div>
 <!-- ./wrapper -->
 
@@ -159,9 +168,11 @@
 <script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
 <script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
 <!-- AdminLTE App -->
-<script src="..dist/js/adminlte.min.js"></script>
+<script src="dist/js/adminlte.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="..dist/js/demo.js"></script>
+<script src="dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard.js"></script>
 <!-- Page specific script -->
 <script>
   $(document).ready(function () {

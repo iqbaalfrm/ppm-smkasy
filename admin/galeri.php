@@ -104,27 +104,25 @@ if (!isset($_SESSION["level"]) || empty($_SESSION["level"])) {
       <div class="container-fluid">
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">Daftar Berita</h3>
+            <h3 class="card-title">Daftar Gambar</h3>
           </div>
           <!-- /.card-header -->
           <p style="font-size: 15pt; margin: 10px 0 10px 0;"></p>
-          <a href="tambah-berita.php"><button class="tombol_tambah" style="margin-bottom: 10px;">Tambah Data</button></a>
+          <a href="tambah-galeri.php"><button class="tombol_tambah" style="margin-bottom: 10px;">Tambah Data</button></a>
           <div class="table-responsive">
             <table>
               <tr>
-                <th>Judul</th>
-                <th>Deskripsi</th>
-                <th>Gambar</th>
+                <th>id</th>
+                <th>gambar</th>
                 <th colspan="2">Aksi</th>
               </tr>
               <?php
               include "koneksi.php";
-              $sql = mysqli_query($koneksi, "SELECT * FROM berita ORDER BY tanggal DESC");
+              $sql = mysqli_query($koneksi, "SELECT * FROM galeri");
 
               while ($data = mysqli_fetch_array($sql)) : ?>
                 <tr>
-                  <td><?= $data["judul"] ?></td>
-                  <td><?= $data["deskripsi"] ?></td>
+                  <td><?= $data["id"] ?></td>
                   <td><img src="dist/img/uploads/<?= $data['gambar'] ?>" alt="gambar" width="300" height="300"></td>
                   <td><a href="edit-berita.php?id=<?= $data["id"] ?>"><button type="button" class="btn btn-block btn-primary">Ubah</button></a></td>
                   <td><a href="hapus-berita.php?id=<?= $data["id"] ?>"><button type="button" class="btn btn-block btn-danger">Hapus</button></a></td>
