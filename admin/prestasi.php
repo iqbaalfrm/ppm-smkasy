@@ -1,8 +1,15 @@
+//buatkan ubah-prestasi.php
 <?php
 session_start();
 if (!isset($_SESSION["level"]) || empty($_SESSION["level"])) {
   header("location:../../index.php?pesan=alert");
   exit(); // penting untuk menghentikan eksekusi kode setelah header
+}
+
+include "../koneksi.php";
+$sql = mysqli_query($koneksi, "SELECT * FROM prestasi ");
+if (!$sql) {
+  die("Query error: " . mysqli_error($koneksi));
 }
 ?>
 
@@ -11,7 +18,7 @@ if (!isset($_SESSION["level"]) || empty($_SESSION["level"])) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin | Berita</title>
+  <title>Admin | Prestasi</title>
   <style>
     .brand-link {
       display: block;
@@ -104,30 +111,26 @@ if (!isset($_SESSION["level"]) || empty($_SESSION["level"])) {
       <div class="container-fluid">
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">Daftar Berita</h3>
+            <h3 class="card-title">Daftar Prestasi</h3>
           </div>
           <!-- /.card-header -->
           <p style="font-size: 15pt; margin: 10px 0 10px 0;"></p>
-          <a href="tambah-berita.php"><button class="tombol_tambah" style="margin-bottom: 10px;">Tambah Data</button></a>
+          <a href="tambah-prestasi.php"><button class="tombol_tambah" style="margin-bottom: 10px;">Tambah Data</button></a>
           <div class="table-responsive">
             <table>
               <tr>
-                <th>Judul</th>
+                <th>Nama</th>
                 <th>Deskripsi</th>
                 <th>Gambar</th>
                 <th colspan="2">Aksi</th>
               </tr>
-              <?php
-              include "koneksi.php";
-              $sql = mysqli_query($koneksi, "SELECT * FROM berita ORDER BY tanggal DESC");
-
-              while ($data = mysqli_fetch_array($sql)) : ?>
+              <?php while ($data = mysqli_fetch_array($sql)) : ?>
                 <tr>
-                  <td><?= $data["judul"] ?></td>
+                  <td><?= $data["nama"] ?></td>
                   <td><?= $data["deskripsi"] ?></td>
                   <td><img src="dist/img/uploads/<?= $data['gambar'] ?>" alt="gambar" width="200" height="200"></td>
-                  <td><a href="edit-berita.php?id=<?= $data["id"] ?>"><button type="button" class="btn btn-block btn-primary">Ubah</button></a></td>
-                  <td><a href="hapus/proses_hapus_berita.php?id=<?= $data["id"] ?>"><button type="button" class="btn btn-block btn-danger">Hapus</button></a></td>
+                  <td><a href="ubah/prestasi_ubah.php?id=<?= $data["id"] ?>"><button type="button" class="btn btn-block btn-primary">Ubah</button></a></td>
+                  <td><a href="hapus-prestasi.php?id=<?= $data["id"] ?>"><button type="button" class="btn btn-block btn-danger">Hapus</button></a></td>
                 </tr>
               <?php endwhile; ?>
             </table>

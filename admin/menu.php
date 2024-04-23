@@ -73,6 +73,14 @@
                     <span class="menu-text">Ekstrakulikuler</span>
                 </a>
             </li>
+
+             <!-- Menu Prestasi -->
+             <li class="nav-item">
+                <a href="prestasi.php" class="nav-link">
+                    <i class="fa-solid fa-users"></i>
+                    <span class="menu-text">Prestasi</span>
+                </a>
+            </li>
         
             <!-- Menu Berita -->
             <li class="nav-item">

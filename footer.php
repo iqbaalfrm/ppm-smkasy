@@ -6,7 +6,7 @@
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-info">
             <a href="index.php" class="logo d-flex align-items-center">
-              <img src="assets/img/humam2.png" alt="" style="max-width: 50%; height: auto;">
+              <img src="assets/img/header.png" alt="" style="max-width: 50%; height: auto;">
             </a>
             <p><br>SMK Asy Syamsuriyyah adalah Sekolah Menengah Kejuruan berbasis Pesantren di Brebes, Jawa Tengah.</p>
             <div class="social-links mt-3" style="color: #14781e;">
