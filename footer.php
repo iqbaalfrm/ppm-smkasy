@@ -43,7 +43,7 @@
             <p>
             <strong>Contact Person:</strong> +62 857 4777 791<br>
               <strong>Contact Person:</strong> +62 857 0145 379<br>
-              <strong>Email:</strong>smk.asyamsuriyyah@gmail.com<br>
+              <strong>Email:</strong> smk.asyamsuriyyah@gmail.com<br>
             </p>
           </div>
         </div>

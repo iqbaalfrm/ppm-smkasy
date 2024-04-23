@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
   <style>
     .contact .info-container {
   background-color: var(--color-primary);
@@ -165,7 +166,7 @@
   </title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-
+  <?php include('dependensi.php');?>
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -182,6 +183,8 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+  
 
   <!-- =======================================================
   * Template Name: Rapid
@@ -240,7 +243,7 @@
                 <i class="bi bi-envelope flex-shrink-0"></i>
                 <div>
                   <h4>Email:</h4>
-                  <p>info@example.com</p>
+                  <p>smk.asyamsuriyyah@gmail.com</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -248,7 +251,10 @@
                 <i class="bi bi-phone flex-shrink-0"></i>
                 <div>
                   <h4>Telepon:</h4>
-                  <p>+1 5589 55488 55</p>
+                  <ul>
+                    <li>+62 857 4777 791</li>
+                    <li>+62 857 0145 379</li>
+                  </ul>
                 </div>
               </div><!-- End Info Item -->
 

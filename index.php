@@ -18,6 +18,14 @@
   <!-- End Hero -->
 
   <main id="main">
+<<<<<<< HEAD
+=======
+
+    <!-- ======= Unggulan Section ======= -->
+    <?php include('sections/pesantren.php'); ?>
+    <!-- End Unggulan Section -->
+
+>>>>>>> 11f8073e57d923ce8e8f236e5eb2433c14e4b12f
     <!-- ======= Services Section ======= -->
     <?php include('sections/jurusan_index.php');?>
     <!-- End Services Section -->
