@@ -1,9 +1,9 @@
 <?php
-session_start();
-if (!isset($_SESSION["level"]) || empty($_SESSION["level"])) {
-  header("location:../../index.php?pesan=alert");
-  exit(); // penting untuk menghentikan eksekusi kode setelah header
-}
+  session_start();
+  if (!isset($_SESSION["level"]) || empty($_SESSION["level"])) {
+    header("location:../../index.php?pesan=alert");
+    exit(); // penting untuk menghentikan eksekusi kode setelah header
+  }
 ?>
 
 <!DOCTYPE html>
@@ -32,15 +32,18 @@ if (!isset($_SESSION["level"]) || empty($_SESSION["level"])) {
     }
 
     table {
-      border-collapse: collapse;
-      width: 100%; /* Sesuaikan dengan lebar layar */
-    }
+  border-collapse: collapse;
+  width: 100%; /* Sesuaikan dengan lebar layar */
+}
 
-    th, td {
-      border: 1px solid #dddddd;
-      text-align: left;
-      padding: 8px;
-    }
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+
+}
+
+
 
     th {
       background-color: #f2f2f2;
@@ -108,32 +111,31 @@ if (!isset($_SESSION["level"]) || empty($_SESSION["level"])) {
           </div>
           <!-- /.card-header -->
           <p style="font-size: 15pt; margin: 10px 0 10px 0;"></p>
-          <a href="tambah-berita.php"><button class="tombol_tambah" style="margin-bottom: 10px;">Tambah Data</button></a>
+          <a href="tambah/form_simpan_berita.php"><button class="tombol_tambah" style="margin-bottom: 10px;">Tambah Data</button></a>
           <div class="table-responsive">
-            <table>
-              <tr>
-                <th>Judul</th>
-                <th>Deskripsi</th>
-                <th>Gambar</th>
-                <th colspan="2">Aksi</th>
-              </tr>
-              <?php
-              include "koneksi.php";
-              $sql = mysqli_query($koneksi, "SELECT * FROM berita ORDER BY tanggal DESC");
+    <table>
+        <tr>
+            <th>Judul</th>
+            <th>Deskripsi</th>
+            <th>Gambar</th>
+            <th colspan="2">Aksi</th>
+        </tr>
+        <?php
+        include "koneksi.php";
+        $sql = mysqli_query($koneksi, "SELECT * FROM berita ORDER BY tanggal DESC");
 
-              while ($data = mysqli_fetch_array($sql)) : ?>
-                <tr>
-                  <td><?= $data["judul"] ?></td>
-                  <td><?= $data["deskripsi"] ?></td>
-                  <td><img src="dist/img/uploads/<?= $data['gambar'] ?>" alt="gambar" width="300" height="300"></td>
-                  <td><a href="edit-berita.php?id=<?= $data["id"] ?>"><button type="button" class="btn btn-block btn-primary">Ubah</button></a></td>
-                  <td><a href="hapus-berita.php?id=<?= $data["id"] ?>"><button type="button" class="btn btn-block btn-danger">Hapus</button></a></td>
-                </tr>
-              <?php endwhile; ?>
-            </table>
-          </div>
-          <!-- /.table-responsive -->
-        </div>
+        while ($data = mysqli_fetch_array($sql)) : ?>
+            <tr>
+                <td><?= $data["judul"] ?></td>
+                <td><?= $data["deskripsi"] ?></td>
+                <td><img src="data:image/jpeg;base64,<?= base64_encode($data['gambar']) ?>" alt="gambar"></td>
+                <td><a href="ubah/berita_ubah.php?id=<?= $data["id"] ?>"><button type="button" class="btn btn-block btn-primary">Ubah</button></a></td>
+                <td><a href="hapus/proses_hapus_berita.php?id=<?= $data["id"] ?>"><button type="button" class="btn btn-block btn-danger">Hapus</button></a></td>
+            </tr>
+        <?php endwhile; ?>
+    </table>
+</div>
+
         <!-- /.card -->
       </div>
       <!-- /.container-fluid -->
@@ -141,6 +143,18 @@ if (!isset($_SESSION["level"]) || empty($_SESSION["level"])) {
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+
+
+                </div>
+                <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
 
   <!-- Main Footer -->
   <?php include('arch/footer.php'); ?>

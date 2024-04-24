@@ -12,26 +12,44 @@
             <li class="nav-item">
                 <a href="#" class="nav-link">
                     <i class="fa-solid fa-school"></i>
-                    <span class="menu-text">Profil Sekolah</span>
+                    <span class="menu-text">Info Sekolah</span>
                     <i class="fas fa-angle-left right"></i>
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
                         <a href="pages/layout/top-nav.html" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
-                            <span class="menu-text">Tentang Kami</span>
+                            <span class="menu-text">Profil Sekolah</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
-                            <span class="menu-text">Prestasi</span>
+                            <span class="menu-text">Visi & Misi</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="pages/layout/boxed.html" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
-                            <span class="menu-text">Kontak</span>
+                            <span class="menu-text">Struktur Organisasi</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <span class="menu-text">Akreditasi</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <span class="menu-text">Sarpras</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+                            <i class="far fa-circle nav-icon"></i>
+                            <span class="menu-text">Prestasi</span>
                         </a>
                     </li>
                 </ul>

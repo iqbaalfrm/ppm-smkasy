@@ -27,22 +27,6 @@
   <link href="assets/css/style.css" rel="stylesheet">
 
   <?php include('dependensi.php'); ?>
-  <style>
-    /* CSS untuk ukuran card tetap */
-    .fixed-card-height .card {
-      height: 450px; /* Sesuaikan dengan ukuran yang diinginkan */
-    }
-    .fixed-card-height .card-body {
-      overflow: hidden;
-    }
-    .fixed-card-height .card-body p {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 3; /* Jumlah baris teks yang ingin ditampilkan */
-      -webkit-box-orient: vertical;
-    }
-  </style>
 </head>
 
 <body>
@@ -67,7 +51,7 @@
     <!-- ======= Blog Section ======= -->
     <section id="blog" class="blog">
       <div class="container" data-aos="fade-up">
-        <div class="row gy-4 posts-list fixed-card-height"> <!-- Tambahkan class fixed-card-height -->
+        <div class="row gy-4 posts-list">
           <?php
           // Buat koneksi ke database
           $koneksi = mysqli_connect("localhost", "root", "", "smkasy");
@@ -90,20 +74,19 @@
               $id_berita = $row['id'];
               $judul = $row['judul'];
               $tanggal = $row['tanggal'];
-              $gambar = $row['gambar']; // Kolom gambar dari database
-
-              // Tambahkan base URL untuk path gambar
-              $imagePath = "admin/dist/img/uploads/" . $gambar;
+              $gambar = "assets/img/paskib.jpeg"; // Path gambar dari lokal
               // Tampilkan data berita dalam format card
-              echo "<div class='col-md-4 mb-4'>";
-              echo "<div class='card'>";
-              echo "<img src='$imagePath' class='card-img-top' alt='$judul' />";
-              echo "<div class='card-body'>";
-              echo "<h5 class='card-title'>$judul</h5>";
-              echo "<p class='card-text'>$tanggal</p>";
-              echo "<a href='blog-details.php?id=$id_berita' class='btn btn-primary'>Baca Selengkapnya</a>";
+              echo "<div class='col-xl-4 col-md-6'>";
+              echo "<article>";
+              echo "<div class='post-img'>";
+              echo "<img src='$gambar' alt='$judul' class='img-fluid'>";
               echo "</div>";
+              echo "<p class='post-category'>Berita</p>";
+              echo "<h2 class='title'><a href='blog-details.php?id=$id_berita'>$judul</a></h2>";
+              echo "<div class='post-meta'>";
+              echo "<p class='post-date'><time datetime='2022-01-01'>$tanggal</time></p>";
               echo "</div>";
+              echo "</article>";
               echo "</div>";
             }
           } else {
@@ -114,6 +97,14 @@
           mysqli_close($koneksi);
           ?>
         </div><!-- End blog posts list -->
+
+        <div class="blog-pagination">
+          <ul class="justify-content-center">
+            <li><a href="#">1</a></li>
+            <li class="active"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+          </ul>
+        </div><!-- End blog pagination -->
       </div>
     </section><!-- End Blog Section -->
 
