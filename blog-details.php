@@ -51,7 +51,7 @@
     <!-- ======= Blog Details Section ======= -->
     <section id="blog" class="blog">
       <div class="container" data-aos="fade-up">
-        <div class="row justify-content-center">
+        <div class="row g-5">
           <div class="col-lg-12">
             <article class="blog-details">
               <?php
@@ -81,18 +81,19 @@
                   $gambar = $row['gambar'];
                   $deskripsi = $row['deskripsi'];
 
-                  // Tambahkan base URL untuk path gambar
-                  $imagePath = "admin/dist/img/uploads/" . $gambar;
-
-                  // Tampilkan detail berita dalam kartu
-                  echo "<div class='card'>";
-                  echo "<img src='$imagePath' class='card-img-top mx-auto d-block' alt='' style='width: 50%;' />";
-                  echo "<div class='card-body'>";
-                  echo "<h5 class='card-title'>$judul</h5>";
-                  echo "<p class='card-text'>$tanggal</p>";
-                  echo "<p class='card-text'>$deskripsi</p>";
+                  // Tampilkan detail berita
+                  echo "<div class='post-img'>";
+                  echo "<img src='$gambar' alt='' class='img-fluid'>";
                   echo "</div>";
-                  echo "</div>";
+                  echo "<h2 class='title'>$judul</h2>";
+                  echo "<div class='meta-top'>";
+                  echo "<ul>";
+                  echo "<li class='d-flex align-items-center'><i class='bi bi-clock'></i> <time datetime='2020-01-01'>$tanggal</time></li>";
+                  echo "</ul>";
+                  echo "</div><!-- End meta top -->";
+                  echo "<div class='content'>";
+                  echo "<p>$deskripsi</p>";
+                  echo "</div><!-- End post content -->";
                 } else {
                   echo "Berita tidak ditemukan.";
                 }

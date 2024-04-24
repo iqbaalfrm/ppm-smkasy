@@ -1,39 +1,9 @@
-<?php
-session_start();
-include "koneksi.php";
-
-// Jika ada data yang dikirimkan melalui form login
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // Mengambil nilai yang dikirim dari form login
-  $username = $_POST["username"];
-  $password = $_POST["password"];
-
-  // Melakukan query untuk mencari user dengan username dan password yang cocok
-  $login = mysqli_query($koneksi, "SELECT * FROM user WHERE username='$username' AND password='$password'");
-  $cek = mysqli_num_rows($login);
-
-  if ($cek > 0) {
-    // Jika user ditemukan, set sesi untuk nama dan status login
-    $data = mysqli_fetch_assoc($login);
-    $_SESSION["nama"] = $data["nama"];
-    $_SESSION["status"] = "login"; // Menggunakan status "login" untuk menandakan user sudah login
-    header("location:index.php"); // Redirect ke halaman setelah login berhasil
-  } else {
-    // Jika user tidak ditemukan, redirect kembali ke halaman login dengan pesan gagal
-    header("location:login.php?pesan=gagal");
-  }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Halaman Login</title>
-  <!-- SweetAlert CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11">
-
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -72,9 +42,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       border-radius: 5px;
     }
 
-    .tombol_login {
-      margin-bottom: 10px;
-    }
+  .tombol_login {
+    margin-bottom: 10px; /* Jarak bawah */
+  }
 
     .tombol_login, .tombol_reset {
       width: 100%;
@@ -122,19 +92,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <?php 
     if (isset($_GET["pesan"])) {
       if ($_GET["pesan"] == "gagal") {
-        // Menampilkan SweetAlert
-        echo "<script>
-          setTimeout(function() {
-            Swal.fire({
-              icon: 'error',
-              title: 'Oops...',
-              text: 'Username dan Password tidak sesuai!'
-            }).then(function() {
-              // Set focus kembali ke input username
-              document.querySelector('.form_login[name=username]').focus();
-            });
-          }, 100);
-        </script>";
+        echo "<div class='alert'>Username dan Password tidak sesuai!</div>";
       } elseif ($_GET["pesan"] == "logout") {
         echo "<div class='berhasil'>Anda berhasil logout!</div>";
       } else {
@@ -147,7 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <img src="logo.png" alt="Logo" style="width: 150px; height: 150px; vertical-align: middle;">
 </h2>
     <p class="tulisan_login">Silahkan Login</p>
-    <form action="" method="post"> <!-- Mengubah action menjadi kosong -->
+    <form action="cek_login.php" method="post">
       <label>Username</label>
       <input type="text" name="username" class="form_login" placeholder="Username.." required="required" autofocus>
       <label>Password</label>
@@ -157,27 +115,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <a href="../index.php"><input type="button" class="tombol_reset" value="KEMBALI"></a>
     </form>
   </div>
-
-  <!-- SweetAlert JS -->
-  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script>
-    // Check if "pesan" parameter exists in URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const pesan = urlParams.get('pesan');
-
-    // If "pesan" is "gagal", show SweetAlert
-    if (pesan === 'gagal') {
-      Swal.fire({
-        icon: 'error',
-        title: 'Oops...',
-        text: 'Username dan Password tidak sesuai!',
-        showConfirmButton: false,
-        timer: 3000 // Close after 3 seconds
-      }).then(function() {
-        // Set focus kembali ke input username
-        document.querySelector('.form_login[name=username]').focus();
-      });
-    }
-  </script>
 </body>
 </html>

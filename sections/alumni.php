@@ -91,11 +91,11 @@
             </div>
             <div class="swiper-slide">
               <div class="alumni-item">
-                <img src="assets/img/testimonial-3.jpg" class="alumni-img" alt="">
-                <h3>John Doe</h3>
-                <h4>Developer</h4>
+                <img src="assets/img/testimonial-2.jpg" class="alumni-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
                 <p>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
                 </p>
               </div>
             </div>
@@ -122,8 +122,6 @@
 <!-- Swiper Initialization Script -->
 <script>
   var swiper = new Swiper('.alumni-slider', {
-    slidesPerView: 1,
-    spaceBetween: 30,
     pagination: {
       el: '.swiper-pagination',
       clickable: true,

@@ -8,7 +8,7 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
   <!-- Favicons -->
-  <link href="assets/img/favicon2.png" rel="icon">
+  <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
@@ -21,35 +21,6 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <?php include('dependensi.php');?>
-  <style>
-    /* Style untuk membuat card sama tinggi */
-    .card {
-      height: 100%;
-    }
-
-    /* Style untuk card body */
-    .card-body {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* Style untuk judul */
-    .card-title {
-      flex: 1;
-    }
-
-    /* Style untuk deskripsi */
-    .card-text {
-      flex: 2;
-    }
-
-    /* Style untuk gambar */
-    .card-img-top {
-      height: 200px; /* Atur tinggi gambar */
-      object-fit: cover; /* Scale gambar */
-    }
-  </style>
 </head>
 
 <body>
@@ -64,7 +35,7 @@
         <ol>
           <li><a href="index.html">Beranda</a></li>
           <li>Prestasi</li>
-        </ol>
+          </ol>
       </div>
     </section><!-- End Breadcrumbs -->
 
@@ -77,40 +48,22 @@
               <div class="card-deck">
                 <div class="container">
                   <div class="row mt-4">
-                    <?php
-                    // Include koneksi ke database
-                    include "koneksi.php";
-
-                    // Query untuk mengambil data prestasi
-                    $sql = "SELECT * FROM prestasi";
-                    $result = mysqli_query($koneksi, $sql);
-
-                    // Cek apakah ada data
-                    if (mysqli_num_rows($result) > 0) {
-                      // Loop untuk setiap data prestasi
-                      while ($row = mysqli_fetch_assoc($result)) {
-                        // Tambahkan base URL untuk path gambar
-                        $imagePath = "admin/dist/img/uploads/" . $row['gambar'];
-                    ?>
-                        <div class="col-md-4 mb-4">
-                          <div class="card">
-                            <img src="<?php echo $imagePath; ?>" class="card-img-top" alt="<?php echo $row['nama']; ?>" />
-                            <div class="card-body">
-                              <!-- Gunakan judul dan deskripsi dari database -->
-                              <h5 class="card-title"><?php echo $row['nama']; ?></h5>
-                              <p class="card-text"><?php echo $row['deskripsi']; ?></p>
-                            </div>
+                    <?php for ($i = 1; $i <= 6; $i++) { ?>
+                      <div class="col-md-4 mb-4">
+                        <div class="card">
+                          <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
+                            <img src="assets/img/test.jpeg" class="img-fluid" />
+                            <a href="#!">
+                              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                            </a>
+                          </div>
+                          <div class="card-body">
+                            <h5 class="card-title">Card title <?php echo $i; ?></h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                           </div>
                         </div>
-                    <?php
-                      }
-                    } else {
-                      echo "Tidak ada data prestasi.";
-                    }
-
-                    // Jangan lupa tutup koneksi
-                    mysqli_close($koneksi);
-                    ?>
+                      </div>
+                    <?php } ?>
                   </div>
                 </div>
               </div>
