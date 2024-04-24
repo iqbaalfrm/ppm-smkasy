@@ -87,33 +87,6 @@
   bottom: 15px;
 }
 
-/* Portfolio Filter Styling */
-#portfolio-flters {
-  padding: 0;
-  margin: 0 auto;
-  text-align: center;
-  list-style: none;
-}
-
-#portfolio-flters li {
-  cursor: pointer;
-  display: inline-block;
-  margin: 0 15px 15px 0;
-  font-size: 16px;
-  line-height: 20px;
-  color: #333;
-  border-radius: 20px;
-  padding: 8px 20px;
-  transition: all 0.3s ease-in-out;
-  background: #fff;
-  border: 2px solid #ccc;
-}
-
-#portfolio-flters li:hover, #portfolio-flters li.filter-active {
-  background: #379237;
-  color: #fff;
-  border-color: #379237;
-}
 
 
   </style>
@@ -162,11 +135,6 @@
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">Guru</li>
-              <li data-filter=".filter-card">Tenaga Pendidik</li>
-            </ul>
           </div>
 </div>
 
