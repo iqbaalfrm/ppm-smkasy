@@ -88,6 +88,7 @@
 }
 
 
+
   </style>
   <title>SMK ASY-SYAMSURIYYAH</title>
   <meta content="" name="description">
@@ -120,23 +121,14 @@
         <ol>
           <li><a href="index.html">Beranda</a></li>
           <li>Profil Tenaga Pendidik</li>
-        </ol>
-      </div>
-    </section><!-- End Breadcrumbs -->
-
-    <!-- ======= Team Section ======= -->
-    <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
-        <ol>
-          <li><a href="index.html">Beranda</a></li>
-          <li>Profil Tenaga Pendidik</li>
-        </ol>
+          </ol>
       </div>
     </section><!-- End Breadcrumbs -->
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="team section-bg">
       <div class="container" data-aos="fade-up">
+
         <div class="section-header">
           <h3>Profil Guru <span>dan</span> Tenaga Pendidik</h3>
         </div>
@@ -144,50 +136,75 @@
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12 d-flex justify-content-center">
           </div>
-        </div>
+</div>
 
         <div class="row">
-          <?php
-          // Query to get data from database
-          $sql = "SELECT * FROM guru";
-          $result = mysqli_query($koneksi, $sql);
-
-          // Check if there are records in the database
-          if (mysqli_num_rows($result) > 0) {
-            while ($row = mysqli_fetch_assoc($result)) {
-              $nama = $row['nama'];
-              $jabatan = $row['jabatan'];
-              $gambar = $row['gambar'];
-          ?>
-              <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                <div class="member" data-aos="fade-up">
-                  <div class="member-img">
-                    <img src="dist/img/uploads/<?php echo $gambar; ?>" class="card-img-top" alt="<?php echo $nama; ?>" style="width: 200px; height: 200px; object-fit: cover;" />
-                  </div>
-                  <div class="member-info">
-                    <h4><?php echo $nama; ?></h4>
-                    <span><?php echo $jabatan; ?></span>
-                    <p>Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <div class="social">
-                      <a href="#"><i class="bi bi-twitter"></i></a>
-                      <a href="#"><i class="bi bi-facebook"></i></a>
-                      <a href="#"><i class="bi bi-instagram"></i></a>
-                      <a href="#"><i class="bi bi-linkedin"></i></a>
-                    </div>
-                  </div>
-                </div>
+          
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch filter-app" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/testimonial-1.jpg" class="img-fluid" alt="">
               </div>
-          <?php
-            }
-          } else {
-            echo "No records found";
-          }
-          ?>
+              <div class="member-info">
+                <h4>Walter White</h4>
+                <span>Chief Executive Officer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch filter-app" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img//testimonial-1.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>Sarah Jhonson</h4>
+                <span>Product Manager</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch filter-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/testimonial-1.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>William Anderson</h4>
+                <span>CTO</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch filter-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/testimonial-1.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>Amanda Jepson</h4>
+                <span>Accountant</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch filter-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="member">
+              <div class="member-img">
+                <img src="assets/img/testimonial-1.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="member-info">
+                <h4>Amanda Jepson</h4>
+                <span>Accountant</span>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
-    </section>
-<!-- End Team Section -->
+    </section><!-- End Team Section -->
+
 
     <!-- footer Section -->
     <?php include "footer.php"; ?>
@@ -206,6 +223,4 @@
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
   </body>
-
 </html>
-
