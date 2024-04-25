@@ -11,7 +11,7 @@
           </div>
           <div class="col-lg-6">
             <p style="text-align: justify;">
-              SMK Asy-Syamsuriyyah merupakan SMK kejuruan yang berbasis pondok pesantren di bawah naungan pendidikan Islam yang sudah berakreditasi B, memiliki visi yang kuat yaitu bertaqwa, berkarakter, dan mandiri. Dengan komitmen ini, SMK Asy-Syamsuriyyah bertekad untuk membentuk generasi muda yang tidak hanya terampil dalam bidang kejuruan, tetapi juga memiliki akhlak dan karakter yang mulia. Di SMK Asy-Syamsuriyyah siswa dan siswi nya juga akan dipersiapkan untuk terjun langsung ke dunia industri.
+              Pesantren
             </p>
           </div>
         </div>

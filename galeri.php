@@ -56,6 +56,7 @@ if (!isset($_SESSION["level"]) || empty($_SESSION["level"])) {
           <li><a href="index.php">Beranda</a></li>
           <li>Galeri</li>
         </ol>
+        <h2>Desain Komunikasi Visual</h2>
 
       </div>
     </section><!-- End Breadcrumbs -->
