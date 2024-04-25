@@ -6,8 +6,8 @@ if (!isset($_SESSION["level"]) || empty($_SESSION["level"])) {
   exit(); // penting untuk menghentikan eksekusi kode setelah header
 }
 
-include "../koneksi.php";
-$sql = mysqli_query($koneksi, "SELECT * FROM ekstra ");
+include "koneksi.php";
+$sql = mysqli_query($koneksi, "SELECT * FROM guru ");
 if (!$sql) {
   die("Query error: " . mysqli_error($koneksi));
 }
@@ -18,7 +18,7 @@ if (!$sql) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin | Prestasi</title>
+  <title>Admin | Guru</title>
   <style>
     .brand-link {
       display: block;
@@ -106,34 +106,38 @@ if (!$sql) {
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Main content -->
-    <div class="content">
-      <div class="container-fluid">
-        <div class="card">
-          <div class="card-header">
-            <h3 class="card-title">Daftar Ekstrakulikuler</h3>
-          </div>
-          <!-- /.card-header -->
-          <p style="font-size: 15pt; margin: 10px 0 10px 0;"></p>
-          <a href="tambah-ekstra.php"><button class="tombol_tambah" style="margin-bottom: 10px;">Tambah Data</button></a>
-          <div class="table-responsive">
-            <table>
-              <tr>
-                <th>Nama</th>
-                <th>Deskripsi</th>
-                <th>Gambar</th>
-                <th colspan="2">Aksi</th>
-              </tr>
-              <?php while ($data = mysqli_fetch_array($sql)) : ?>
-                <tr>
-                  <td><?= $data["nama"] ?></td>
-                  <td><?= $data["deskripsi"] ?></td>
-                  <td><img src="dist/img/uploads/<?= $data['gambar'] ?>" alt="gambar" width="400" height="400"></td>
-                  <td><a href="ubah-ekstra.php?id=<?= $data["id"] ?>"><button type="button" class="btn btn-block btn-primary">Ubah</button></a></td>
-                  <td><a href="hapus-ekstra.php?id=<?= $data["id"] ?>"><button type="button" class="btn btn-block btn-danger">Hapus</button></a></td>
-                </tr>
-              <?php endwhile; ?>
-            </table>
+        <!-- Main content -->
+        <div class="content">
+            <div class="container-fluid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Daftar Guru</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <p style="font-size: 15pt; margin: 10px 0 10px 0;"></p>
+                    <a href="tambah-guru.php"><button class="tombol_tambah" style="margin-bottom: 10px;">Tambah Data</button></a>
+                    <div class="table-responsive">
+                        <table>
+                            <thead> <!-- Gunakan tag thead untuk header -->
+                                <tr>
+                                    <th>Nama</th>
+                                    <th>Jabatan</th>
+                                    <th>Gambar</th>
+                                    <th colspan="2">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody> <!-- Gunakan tag tbody untuk data -->
+                                <?php while ($data = mysqli_fetch_array($sql)) : ?>
+                                    <tr>
+                                        <td><?= $data["nama"] ?></td> <!-- Pastikan nama kolom sesuai -->
+                                        <td><?= $data["jabatan"] ?></td> <!-- Pastikan nama kolom sesuai -->
+                                        <td><img src="dist/img/uploads/guru<?= $data['gambar'] ?>" alt="gambar" width="200" height="200"></td>
+                                        <td><a href="ubah/prestasi_ubah.php?id=<?= $data["id"] ?>"><button type="button" class="btn btn-block btn-primary">Ubah</button></a></td>
+                                        <td><a href="hapus-prestasi.php?id=<?= $data["id"] ?>"><button type="button" class="btn btn-block btn-danger">Hapus</button></a></td>
+                                    </tr>
+                                <?php endwhile; ?>
+                            </tbody>
+                        </table>
           </div>
           <!-- /.table-responsive -->
         </div>
