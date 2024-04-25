@@ -14,7 +14,7 @@
 
 .contact .info-item {
   width: 100%;
-  background-color: #009282;
+  background-color: #379237;
   margin-bottom: 20px;
   padding: 20px;
   border-radius: 10px;
@@ -136,7 +136,7 @@
 }
 
 .contact .php-email-form button[type=submit] {
-  background: #007bff; /* Ubah warna latar belakang menjadi biru */
+  background: #379237;
   border: 0;
   padding: 14px 45px;
   color: #fff;
@@ -162,14 +162,11 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>SMK ASY-SYAMSURIYYAH
-  </title>
+  <title>SMK ASY-SYAMSURIYYAH</title>
+  <?php include('dependensi.php');?>
   <meta content="" name="description">
   <meta content="" name="keywords">
-  <?php include('dependensi.php');?>
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Favicons -->
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
@@ -221,11 +218,6 @@
    <!-- ======= Contact Section ======= -->
    <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-          <p>Nulla dolorum nulla nesciunt rerum facere sed ut inventore quam porro nihil id ratione ea sunt quis dolorem dolore earum</p>
-        </div>
-
         <div class="row gx-lg-0 gy-4">
 
           <div class="col-lg-4">
@@ -252,8 +244,8 @@
                 <div>
                   <h4>Telepon:</h4>
                   <ul>
-                    <li>+62 857 4777 791</li>
-                    <li>+62 857 0145 379</li>
+                    <li>+62 857 4777 791 (M. Hasbi Affandi)</li>
+                    <li>+62 857 0145 379 (Zainul Ma'arif)</li>
                   </ul>
                 </div>
               </div><!-- End Info Item -->
@@ -273,17 +265,17 @@
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Nama Lengkap" required>
                 </div>
                 <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                  <input type="email" class="form-control" name="email" id="email" placeholder=" Email" required>
                 </div>
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subjek" required>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="7" placeholder="Message" required></textarea>
+                <textarea class="form-control" name="message" rows="7" placeholder="Pesan Anda" required></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>

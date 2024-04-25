@@ -39,7 +39,7 @@
             </ul>
           </li>
           <li class="bkk">
-            <a href="bkk.php"><span>BKK</span></a>
+            <a href="https://bkk.smk-asysyamsuriyyah.sch.id/"><span>BKK</span></a>
           
           </li>
           <button class="scrollto btn-ppdb round" onclick="window.location.href='ppdb.php'">PPDB</button>

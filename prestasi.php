@@ -2,8 +2,9 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juara Lomba</title>
   <title>SMK ASY-SYAMSURIYYAH</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -19,13 +20,34 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
   <?php include('dependensi.php');?>
+  <style>
+    table {
+      width: 100%;
+      max-width: 1000px; /* Menentukan lebar maksimum tabel */
+      border-collapse: collapse;
+      margin : 0 auto;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+      
+    }
+
+    th {
+      background-color: #379237;
+      color: white;
+    }
+  </style>
 </head>
 
 <body>
-  <!-- ======= Header ======= -->
-  <?php include('header.php'); ?>
+
+<!-- ======= Header ======= -->
+<?php include('header.php'); ?>
   <!-- End Header -->
 
   <main id="main">
@@ -38,48 +60,58 @@
           </ol>
       </div>
     </section><!-- End Breadcrumbs -->
+    <div class="section-header">
+  <h3>Juara Lomba</h3>
+    </div>
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: center;">Juara</th>
+        <th style="text-align: center;">Tingkat</th>
+        <th style="text-align: center;">Keterangan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Tingkat Kabupaten</td>
+        <td>Juara Tilawatil Qur'an Putra Tahun 2015</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Tingkat Kabupaten</td>
+        <td>Juara Lomba Poster Tahun 2015</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Tingkat Kabupaten</td>
+        <td>Juara Lomba Tari Tahun 2015</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Tingkat Putra Kabupaten Brebes</td>
+        <td>Juara Lomba Poster Dalam Rangka HIV Tahun 2016</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Tingkat Kabupaten</td>
+        <td>Juara Lomba Vokal Tahun 2016</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Lomba Desain Grafis Tingkat SMK SeKabupaten Brebes</td>
+        <td>Juara Lomba Desain Grafis Tahun 2019</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Lomba Desain Grafis Tingkat SMK SeKabupaten Brebes</td>
+        <td>Juara Lomba Desain Grafis Tahun 2020</td>
+      </tr>
+    </tbody>
+  </table>
 
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="section-extracurricular">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="extracurricular-section">
-              <div class="card-deck">
-                <div class="container">
-                  <div class="row mt-4">
-                    <?php for ($i = 1; $i <= 6; $i++) { ?>
-                      <div class="col-md-4 mb-4">
-                        <div class="card">
-                          <div class="bg-image hover-overlay" data-mdb-ripple-init data-mdb-ripple-color="light">
-                            <img src="assets/img/test.jpeg" class="img-fluid" />
-                            <a href="#!">
-                              <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
-                            </a>
-                          </div>
-                          <div class="card-body">
-                            <h5 class="card-title">Card title <?php echo $i; ?></h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                          </div>
-                        </div>
-                      </div>
-                    <?php } ?>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Portfolio Details Section -->
-
-    <!-- ======= Clients Section ======= -->
-    <?php include "sections/klien.php"; ?>
-    <!-- ======= End Clients Section ======= -->
-
-    <!-- footer Section -->
-    <?php include "footer.php"; ?>
+  <!-- footer Section -->
+  <?php include "footer.php"; ?>
     <!-- Section footer end -->
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -94,5 +126,6 @@
     <script src="assets/vendor/php-email-form/validate.js"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-  </body>
+</body>
+
 </html>
