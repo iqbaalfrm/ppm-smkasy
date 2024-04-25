@@ -46,9 +46,9 @@
 
         <ol>
           <li><a href="index.php">Beranda</a></li>
-          <li>Tentang DKV</li>
+          <li>Galeri</li>
         </ol>
-        <h2>Desain Komunikasi Visual</h2>
+        <h2>Galeri Kami</h2>
 
       </div>
     </section><!-- End Breadcrumbs -->
