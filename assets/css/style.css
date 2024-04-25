@@ -415,6 +415,15 @@ h6 {
   padding-top: 110px;
 }
 
+.psntrn {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: #b3fcbf url("../img/bg5.png") center top no-repeat;
+  background-size: cover;
+  padding-top: 110px;
+}
+
 @media (max-width: 991px) {
   #hero {
     height: auto;
@@ -550,6 +559,10 @@ section {
 --------------------------------*/
 .section-bg {
   background: #f5f8fd;
+}
+
+.section-bg2 {
+  background: white;
 }
 
 /* About Us Section */

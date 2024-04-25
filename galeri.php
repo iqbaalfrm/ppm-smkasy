@@ -18,7 +18,7 @@ if (!isset($_SESSION["level"]) || empty($_SESSION["level"])) {
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/fav2.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -56,6 +56,7 @@ if (!isset($_SESSION["level"]) || empty($_SESSION["level"])) {
           <li><a href="index.php">Beranda</a></li>
           <li>Galeri</li>
         </ol>
+        <h2>Desain Komunikasi Visual</h2>
 
       </div>
     </section><!-- End Breadcrumbs -->

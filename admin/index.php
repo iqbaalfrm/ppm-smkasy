@@ -25,11 +25,13 @@
 
   </style>
   <?php
- session_start();
- if ($_SESSION["level"] == "") {
-   header("location:../../index.php?pesan=alert");
- }
- ?>
+    session_start();
+    if ($_SESSION["level"] == "") {
+      header("location:../../index.php?pesan=alert");
+    }
+
+    include'koneksi.php';
+  ?>
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -55,7 +57,7 @@
 <div class="wrapper">
 
   <!-- Preloader -->
-  <?php include('preloader.php'); ?>
+ 
 
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -65,7 +67,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index.html" class="nav-link">Beranda</a>
+        <a href="index.php" class="nav-link">Beranda</a>
       </li>
     </ul>
   </nav>
@@ -74,7 +76,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index.html" class="brand-link">
+    <a href="index.php" class="brand-link">
       <span class="brand-text font-weight-light">SMK ASY-SYAMSURIYYAH</span>
     </a>
 
@@ -114,7 +116,80 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
-    <?php include('arch/dashboard.php'); ?>
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          <!-- Card Berita -->
+          <div class="col-lg-4 col-6">
+            <div class="small-box bg-info">
+              <div class="inner">
+                <?php
+                  // Mengambil jumlah berita dari database (misalnya tabel berita)
+                  $query_berita = "SELECT COUNT(*) AS total_berita FROM berita";
+                  $result_berita = mysqli_query($koneksi, $query_berita);
+                  $row_berita = mysqli_fetch_assoc($result_berita);
+                  $total_berita = $row_berita['total_berita'];
+                ?>
+                <h3><?php echo $total_berita; ?></h3>
+                <p>Berita</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
+              </div>
+              <a href="#" class="small-box-footer">Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+
+          <!-- Card Prestasi -->
+          <div class="col-lg-4 col-6">
+            <div class="small-box bg-success">
+              <div class="inner">
+                <?php
+                  // Mengambil jumlah prestasi dari database (misalnya tabel prestasi)
+                  $query_prestasi = "SELECT COUNT(*) AS total_prestasi FROM prestasi";
+                  $result_prestasi = mysqli_query($koneksi, $query_prestasi);
+                  $row_prestasi = mysqli_fetch_assoc($result_prestasi);
+                  $total_prestasi = $row_prestasi['total_prestasi'];
+                ?>
+                <h3><?php echo $total_prestasi; ?></h3>
+                <p>Prestasi</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-stats-bars"></i>
+              </div>
+              <a href="#" class="small-box-footer">Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+
+          <!-- Card ekstra -->
+          <div class="col-lg-4 col-6">
+            <div class="small-box bg-warning">
+              <div class="inner">
+                <?php
+                  // Mengambil jumlah ekstra dari database (misalnya tabel ekstra)
+                  $query_ekstra = "SELECT COUNT(*) AS total_ekstra FROM ekstra";
+                  $result_ekstra = mysqli_query($koneksi, $query_ekstra);
+                  $row_ekstra = mysqli_fetch_assoc($result_ekstra);
+                  $total_ekstra = $row_ekstra['total_ekstra'];
+                ?>
+                <h3><?php echo $total_ekstra; ?></h3>
+                <p>ekstrakulikuler</p>
+              </div>
+              <div class="icon">
+                <i class="ion ion-person-add"></i>
+              </div>
+              <a href="#" class="small-box-footer">Selengkapnya <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+          </div>
+          <!-- ./col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->

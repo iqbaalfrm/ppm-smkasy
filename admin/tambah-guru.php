@@ -4,6 +4,57 @@ if (!isset($_SESSION["level"]) || empty($_SESSION["level"])) {
   header("location:../../index.php?pesan=alert");
   exit(); // penting untuk menghentikan eksekusi kode setelah header
 }
+
+include "../koneksi.php";
+
+// Proses form jika ada data yang dikirim
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // Ambil data yang dikirimkan melalui form
+  $nama = $_POST["nama"];
+  $jabatan = $_POST["jabatan"];
+
+  // Proses upload gambar
+  $gambar = null;
+  if (isset($_FILES['gambar'])) {
+    $file_name = $_FILES['gambar']['name'];
+    $file_size = $_FILES['gambar']['size'];
+    $file_tmp = $_FILES['gambar']['tmp_name'];
+    $file_type = $_FILES['gambar']['type'];
+    $file_error = $_FILES['gambar']['error'];
+
+    // Cek apakah file sudah diupload
+    if ($file_error === 0) {
+      $extensions = array("jpeg", "jpg", "png");
+
+      // Ambil ekstensi file
+      $file_ext = pathinfo($file_name, PATHINFO_EXTENSION);
+
+      // Cek apakah ekstensi file sesuai dengan yang diizinkan
+      if (in_array($file_ext, $extensions)) {
+        // Generate nama unik untuk file
+        $gambar = uniqid() . '.' . $file_ext;
+
+        // Pindahkan file ke folder uploads
+        move_uploaded_file($file_tmp, "dist/img/uploads/guru" . $gambar);
+      } else {
+        echo "Ekstensi file tidak diizinkan, hanya ekstensi jpeg, jpg, dan png yang diperbolehkan.";
+      }
+    } else {
+      echo "Terjadi kesalahan saat upload file.";
+    }
+  }
+
+  // Query SQL untuk menyimpan data ke database
+  $query = "INSERT INTO guru (nama, jabatan, gambar) VALUES ('$nama', '$jabatan', '$gambar')";
+  $result = mysqli_query($koneksi, $query);
+
+  if ($result) {
+    // Redirect ke halaman daftar ekstrakurikuler jika berhasil
+    header("location: guru.php");
+  } else {
+    echo "Error: " . $query . "<br>" . mysqli_error($koneksi);
+  }
+}
 ?>
 
 <!DOCTYPE html>
@@ -11,57 +62,7 @@ if (!isset($_SESSION["level"]) || empty($_SESSION["level"])) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin | Tambah Berita</title>
-  <style>
-    .brand-link {
-      display: block;
-      text-align: center;
-    }
-  
-    .brand-text {
-      display: inline-block;
-    }
-    
-    .nav-link {
-      display: flex;
-      align-items: center;
-    }
-
-    .nav-link .menu-text {
-      margin-left: 10px; /* Sesuaikan jarak sesuai kebutuhan */
-    }
-
-    .form-group {
-      margin-bottom: 1rem;
-    }
-
-    label {
-      display: inline-block;
-      margin-bottom: 0.5rem;
-    }
-
-    input[type="text"],
-    textarea {
-      width: 100%;
-      padding: 0.5rem;
-      border: 1px solid #ced4da;
-      border-radius: 0.25rem;
-    }
-
-    .btn-submit {
-      padding: 0.5rem 1rem;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 0.25rem;
-      cursor: pointer;
-    }
-
-    .btn-submit:hover {
-      background-color: #0056b3;
-    }
-
-  </style>
+  <title>Admin | Tambah Ekstrakurikuler</title>
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -119,27 +120,31 @@ if (!isset($_SESSION["level"]) || empty($_SESSION["level"])) {
       <div class="container-fluid">
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">Tambah Berita</h3>
+            <h3 class="card-title">Tambah Ekstrakurikuler</h3>
           </div>
           <!-- /.card-header -->
-          <div class="card-body">
-            <form action="proses-tambah-berita.php" method="POST" enctype="multipart/form-data">
+          <!-- form start -->
+          <form role="form" method="POST" enctype="multipart/form-data">
+            <div class="card-body">
               <div class="form-group">
-                <label for="judul">Judul</label>
-                <input type="text" id="judul" name="judul" required>
+                <label for="nama">Nama Ekstrakurikuler</label>
+                <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama Ekstrakurikuler" required>
               </div>
               <div class="form-group">
-                <label for="deskripsi">Deskripsi</label>
-                <textarea id="deskripsi" name="deskripsi" rows="4" required></textarea>
+                <label for="jabatan">jabatan</label>
+                <textarea class="form-control" id="jabatan" name="jabatan" rows="3" placeholder="Masukkan jabatan" required></textarea>
               </div>
               <div class="form-group">
                 <label for="gambar">Gambar</label>
-                <input type="file" id="gambar" name="gambar" accept="image/*" required>
+                <input type="file" class="form-control" id="gambar" name="gambar">
               </div>
-              <button type="submit" class="btn-submit">Simpan</button>
-            </form>
-          </div>
-          <!-- /.card-body -->
+            </div>
+            <!-- /.card-body -->
+
+            <div class="card-footer">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
         </div>
         <!-- /.card -->
       </div>
@@ -159,6 +164,6 @@ if (!isset($_SESSION["level"]) || empty($_SESSION["level"])) {
 <!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
+<script src="dist/js/adminlte.js"></script>
 </body>
 </html>

@@ -1,9 +1,16 @@
+
 <?php
-  session_start();
-  if (!isset($_SESSION["level"]) || empty($_SESSION["level"])) {
-    header("location:../../index.php?pesan=alert");
-    exit(); // penting untuk menghentikan eksekusi kode setelah header
-  }
+session_start();
+if (!isset($_SESSION["level"]) || empty($_SESSION["level"])) {
+  header("location:../../index.php?pesan=alert");
+  exit(); // penting untuk menghentikan eksekusi kode setelah header
+}
+
+include "koneksi.php";
+$sql = mysqli_query($koneksi, "SELECT * FROM guru ");
+if (!$sql) {
+  die("Query error: " . mysqli_error($koneksi));
+}
 ?>
 
 <!DOCTYPE html>
@@ -11,7 +18,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin | Berita</title>
+  <title>Admin | Guru</title>
   <style>
     .brand-link {
       display: block;
@@ -32,18 +39,15 @@
     }
 
     table {
-  border-collapse: collapse;
-  width: 100%; /* Sesuaikan dengan lebar layar */
-}
+      border-collapse: collapse;
+      width: 100%; /* Sesuaikan dengan lebar layar */
+    }
 
-th, td {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-
-}
-
-
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
 
     th {
       background-color: #f2f2f2;
@@ -102,40 +106,41 @@ th, td {
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-    <!-- Main content -->
-    <div class="content">
-      <div class="container-fluid">
-        <div class="card">
-          <div class="card-header">
-            <h3 class="card-title">Daftar Berita</h3>
+        <!-- Main content -->
+        <div class="content">
+            <div class="container-fluid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Daftar Guru</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <p style="font-size: 15pt; margin: 10px 0 10px 0;"></p>
+                    <a href="tambah-guru.php"><button class="tombol_tambah" style="margin-bottom: 10px;">Tambah Data</button></a>
+                    <div class="table-responsive">
+                        <table>
+                            <thead> <!-- Gunakan tag thead untuk header -->
+                                <tr>
+                                    <th>Nama</th>
+                                    <th>Jabatan</th>
+                                    <th>Gambar</th>
+                                    <th colspan="2">Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody> <!-- Gunakan tag tbody untuk data -->
+                                <?php while ($data = mysqli_fetch_array($sql)) : ?>
+                                    <tr>
+                                        <td><?= $data["nama"] ?></td> <!-- Pastikan nama kolom sesuai -->
+                                        <td><?= $data["jabatan"] ?></td> <!-- Pastikan nama kolom sesuai -->
+                                        <td><img src="dist/img/uploads/guru<?= $data['gambar'] ?>" alt="gambar" width="200" height="200"></td>
+                                        <td><a href="ubah/prestasi_ubah.php?id=<?= $data["id"] ?>"><button type="button" class="btn btn-block btn-primary">Ubah</button></a></td>
+                                        <td><a href="hapus-prestasi.php?id=<?= $data["id"] ?>"><button type="button" class="btn btn-block btn-danger">Hapus</button></a></td>
+                                    </tr>
+                                <?php endwhile; ?>
+                            </tbody>
+                        </table>
           </div>
-          <!-- /.card-header -->
-          <p style="font-size: 15pt; margin: 10px 0 10px 0;"></p>
-          <a href="tambah/form_simpan_berita.php"><button class="tombol_tambah" style="margin-bottom: 10px;">Tambah Data</button></a>
-          <div class="table-responsive">
-    <table>
-        <tr>
-            <th>Judul</th>
-            <th>Deskripsi</th>
-            <th>Gambar</th>
-            <th colspan="2">Aksi</th>
-        </tr>
-        <?php
-        include "koneksi.php";
-        $sql = mysqli_query($koneksi, "SELECT * FROM berita ORDER BY tanggal DESC");
-
-        while ($data = mysqli_fetch_array($sql)) : ?>
-            <tr>
-                <td><?= $data["judul"] ?></td>
-                <td><?= $data["deskripsi"] ?></td>
-                <td><img src="data:image/jpeg;base64,<?= base64_encode($data['gambar']) ?>" alt="gambar"></td>
-                <td><a href="ubah/berita_ubah.php?id=<?= $data["id"] ?>"><button type="button" class="btn btn-block btn-primary">Ubah</button></a></td>
-                <td><a href="hapus/proses_hapus_berita.php?id=<?= $data["id"] ?>"><button type="button" class="btn btn-block btn-danger">Hapus</button></a></td>
-            </tr>
-        <?php endwhile; ?>
-    </table>
-</div>
-
+          <!-- /.table-responsive -->
+        </div>
         <!-- /.card -->
       </div>
       <!-- /.container-fluid -->
@@ -143,18 +148,6 @@ th, td {
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-
-
-                </div>
-                <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
-        </div>
-        <!-- /.container-fluid -->
-    </div>
-    <!-- /.content -->
-</div>
-<!-- /.content-wrapper -->
 
   <!-- Main Footer -->
   <?php include('arch/footer.php'); ?>

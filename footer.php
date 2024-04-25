@@ -41,8 +41,8 @@
              Kabupaten Brebes, Jawa Tengah <br><br>
             </a>
             <p>
-            <strong>Contact Person:</strong> +62 857 4777 791<br>
-              <strong>Contact Person:</strong> +62 857 0145 379<br>
+            <strong>Contact Person:</strong> +62 857 4777 791 (M. Hasbi Affandi)<br>
+              <strong>Contact Person:</strong> +62 857 0145 379 (Zainul Ma'arif)<br>
               <strong>Email:</strong> smk.asyamsuriyyah@gmail.com<br>
             </p>
           </div>

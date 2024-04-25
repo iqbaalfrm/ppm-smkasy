@@ -1,4 +1,4 @@
-    <nav class="mt-2">
+<nav class="mt-2">
     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <!-- Menu Dashboard -->
         <li class="nav-item menu-open">
@@ -37,14 +37,6 @@
         <a href="galeri.php" class="nav-link">
             <i class="fas fa-photo-film"></i>
             <span class="menu-text">Galeri</span>
-        </a>
-        </li>
-
-        <!-- Menu Alumni -->
-        <li class="nav-item">
-        <a href="alumni.php" class="nav-link">
-            <i class="fas fa-user-graduate"></i>
-            <span class="menu-text">Alumni</span>
         </a>
         </li>
 

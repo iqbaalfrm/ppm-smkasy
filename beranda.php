@@ -23,14 +23,7 @@
   <!-- End Hero -->
 
   <main id="main">
-<<<<<<< HEAD
-=======
 
-    <!-- ======= Unggulan Section ======= -->
-    <?php include('sections/pesantren.php'); ?>
-    <!-- End Unggulan Section -->
-
->>>>>>> 11f8073e57d923ce8e8f236e5eb2433c14e4b12f
     <!-- ======= Services Section ======= -->
     <?php include('sections/jurusan_index.php');?>
     <!-- End Services Section -->
@@ -64,7 +57,7 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-   <!-- Vendor JS Files -->
+  <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -75,37 +68,6 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-
-  <!-- Hamburger Menu Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const select = (el, all = false) => {
-        el = el.trim();
-        if (all) {
-          return [...document.querySelectorAll(el)];
-        } else {
-          return document.querySelector(el);
-        }
-      };
-
-      const on = (type, el, listener, all = false) => {
-        let selectEl = select(el, all);
-        if (selectEl) {
-          if (all) {
-            selectEl.forEach((e) => e.addEventListener(type, listener));
-          } else {
-            selectEl.addEventListener(type, listener);
-          }
-        }
-      };
-
-      on("click", ".mobile-nav-toggle", function (e) {
-        select("#navbar").classList.toggle("navbar-mobile");
-        this.classList.toggle("bi-list");
-        this.classList.toggle("bi-x");
-      });
-    });
-  </script>
 
 </body>
 

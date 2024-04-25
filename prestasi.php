@@ -2,13 +2,14 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juara Lomba</title>
   <title>SMK ASY-SYAMSURIYYAH</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
   <!-- Favicons -->
-  <link href="assets/img/favicon2.png" rel="icon">
+  <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
@@ -19,42 +20,34 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- <link href="assets/css/style.css" rel="stylesheet"> -->
   <?php include('dependensi.php');?>
   <style>
-    /* Style untuk membuat card sama tinggi */
-    .card {
-      height: 100%;
+    table {
+      width: 100%;
+      max-width: 1000px; /* Menentukan lebar maksimum tabel */
+      border-collapse: collapse;
+      margin : 0 auto;
     }
 
-    /* Style untuk card body */
-    .card-body {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+      
     }
 
-    /* Style untuk judul */
-    .card-title {
-      flex: 1;
-    }
-
-    /* Style untuk deskripsi */
-    .card-text {
-      flex: 2;
-    }
-
-    /* Style untuk gambar */
-    .card-img-top {
-      height: 200px; /* Atur tinggi gambar */
-      object-fit: cover; /* Scale gambar */
+    th {
+      background-color: #379237;
+      color: white;
     }
   </style>
 </head>
 
 <body>
-  <!-- ======= Header ======= -->
-  <?php include('header.php'); ?>
+
+<!-- ======= Header ======= -->
+<?php include('header.php'); ?>
   <!-- End Header -->
 
   <main id="main">
@@ -64,69 +57,61 @@
         <ol>
           <li><a href="index.html">Beranda</a></li>
           <li>Prestasi</li>
-        </ol>
+          </ol>
       </div>
     </section><!-- End Breadcrumbs -->
+    <div class="section-header">
+  <h3>Juara Lomba</h3>
+    </div>
+  <table>
+    <thead>
+      <tr>
+        <th style="text-align: center;">Juara</th>
+        <th style="text-align: center;">Tingkat</th>
+        <th style="text-align: center;">Keterangan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Tingkat Kabupaten</td>
+        <td>Juara Tilawatil Qur'an Putra Tahun 2015</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Tingkat Kabupaten</td>
+        <td>Juara Lomba Poster Tahun 2015</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Tingkat Kabupaten</td>
+        <td>Juara Lomba Tari Tahun 2015</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Tingkat Putra Kabupaten Brebes</td>
+        <td>Juara Lomba Poster Dalam Rangka HIV Tahun 2016</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Tingkat Kabupaten</td>
+        <td>Juara Lomba Vokal Tahun 2016</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>Lomba Desain Grafis Tingkat SMK SeKabupaten Brebes</td>
+        <td>Juara Lomba Desain Grafis Tahun 2019</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Lomba Desain Grafis Tingkat SMK SeKabupaten Brebes</td>
+        <td>Juara Lomba Desain Grafis Tahun 2020</td>
+      </tr>
+    </tbody>
+  </table>
 
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="section-extracurricular">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="extracurricular-section">
-              <div class="card-deck">
-                <div class="container">
-                  <div class="row mt-4">
-                    <?php
-                    // Include koneksi ke database
-                    include "koneksi.php";
-
-                    // Query untuk mengambil data prestasi
-                    $sql = "SELECT * FROM prestasi";
-                    $result = mysqli_query($koneksi, $sql);
-
-                    // Cek apakah ada data
-                    if (mysqli_num_rows($result) > 0) {
-                      // Loop untuk setiap data prestasi
-                      while ($row = mysqli_fetch_assoc($result)) {
-                        // Tambahkan base URL untuk path gambar
-                        $imagePath = "admin/dist/img/uploads/" . $row['gambar'];
-                    ?>
-                        <div class="col-md-4 mb-4">
-                          <div class="card">
-                            <img src="<?php echo $imagePath; ?>" class="card-img-top" alt="<?php echo $row['nama']; ?>" />
-                            <div class="card-body">
-                              <!-- Gunakan judul dan deskripsi dari database -->
-                              <h5 class="card-title"><?php echo $row['nama']; ?></h5>
-                              <p class="card-text"><?php echo $row['deskripsi']; ?></p>
-                            </div>
-                          </div>
-                        </div>
-                    <?php
-                      }
-                    } else {
-                      echo "Tidak ada data prestasi.";
-                    }
-
-                    // Jangan lupa tutup koneksi
-                    mysqli_close($koneksi);
-                    ?>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Portfolio Details Section -->
-
-    <!-- ======= Clients Section ======= -->
-    <?php include "sections/klien.php"; ?>
-    <!-- ======= End Clients Section ======= -->
-
-    <!-- footer Section -->
-    <?php include "footer.php"; ?>
+  <!-- footer Section -->
+  <?php include "footer.php"; ?>
     <!-- Section footer end -->
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -141,5 +126,6 @@
     <script src="assets/vendor/php-email-form/validate.js"></script>
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-  </body>
+</body>
+
 </html>

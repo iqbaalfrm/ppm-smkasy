@@ -118,8 +118,7 @@
    * Mobile nav toggle
    */
   on("click", ".mobile-nav-toggle", function (e) {
-    const navbar = select("#navbar");
-    navbar.classList.toggle("navbar-mobile");
+    select("#navbar").classList.toggle("navbar-mobile");
     this.classList.toggle("bi-list");
     this.classList.toggle("bi-x");
   });
@@ -140,7 +139,7 @@
   );
 
   /**
-   * Scroll with ofset on links with a class name .scrollto
+   * Scrool with ofset on links with a class name .scrollto
    */
   on(
     "click",
@@ -174,7 +173,7 @@
   });
 
   /**
-   * Portfolio isotope and filter
+   * Porfolio isotope and filter
    */
   window.addEventListener("load", () => {
     let portfolioContainer = select(".portfolio-container");

@@ -4,6 +4,8 @@ if (!isset($_SESSION["level"]) || empty($_SESSION["level"])) {
   header("location:../../index.php?pesan=alert");
   exit(); // penting untuk menghentikan eksekusi kode setelah header
 }
+
+include('koneksi.php');
 ?>
 
 <!DOCTYPE html>

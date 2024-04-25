@@ -9,19 +9,10 @@ include "koneksi.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Ambil data yang dikirimkan melalui form
-  $nama = $_POST["nama"];
   $deskripsi = $_POST["deskripsi"];
-  $gambar = $_FILES["gambar"]["name"];
-  $temp = $_FILES["gambar"]["tmp_name"];
-
-  // Set path tempat menyimpan gambar
-  $path = "dist/img/uploads/";
-
-  // Pindahkan file gambar dari temp ke folder uploads
-  move_uploaded_file($temp, $path . $gambar);
 
   // Query untuk memasukkan data ke dalam tabel
-  $sql = "INSERT INTO prestasi (nama, deskripsi, gambar) VALUES ('$nama', '$deskripsi', '$gambar')";
+  $sql = "INSERT INTO prestasi (deskripsi) VALUES ('$deskripsi')";
   $result = mysqli_query($koneksi, $sql);
 
   if ($result) {
@@ -143,16 +134,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <div class="card-body">
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
               <div class="form-group">
-                <label for="nama">Nama Prestasi:</label>
-                <input type="text" id="nama" name="nama" class="form-control" required>
-              </div>
-              <div class="form-group">
-                <label for="deskripsi">Deskripsi Prestasi:</label>
+                <label for="deskripsi">Prestasi:</label>
                 <textarea id="deskripsi" name="deskripsi" rows="4" class="form-control" required></textarea>
-              </div>
-              <div class="form-group">
-                <label for="gambar">Gambar Prestasi:</label>
-                <input type="file" id="gambar" name="gambar" accept="image/*" class="form-control-file" required>
               </div>
               <button type="submit" class="tombol_tambah">Tambah Prestasi</button>
             </form>

@@ -119,16 +119,14 @@ if (!$sql) {
           <div class="table-responsive">
             <table>
               <tr>
-                <th>Nama</th>
+                <th>id</th>
                 <th>Deskripsi</th>
-                <th>Gambar</th>
                 <th colspan="2">Aksi</th>
               </tr>
               <?php while ($data = mysqli_fetch_array($sql)) : ?>
                 <tr>
-                  <td><?= $data["nama"] ?></td>
+                  <td><?= $data["id"] ?></td>
                   <td><?= $data["deskripsi"] ?></td>
-                  <td><img src="dist/img/uploads/<?= $data['gambar'] ?>" alt="gambar" width="200" height="200"></td>
                   <td><a href="ubah/prestasi_ubah.php?id=<?= $data["id"] ?>"><button type="button" class="btn btn-block btn-primary">Ubah</button></a></td>
                   <td><a href="hapus-prestasi.php?id=<?= $data["id"] ?>"><button type="button" class="btn btn-block btn-danger">Hapus</button></a></td>
                 </tr>
