@@ -16,16 +16,16 @@
             <p style="text-align: justify;">
             <ul>
               <li data-aos="fade-up" data-aos-delay="100">
-                  <h5 style = "color: #14781e" >Lancar Baca Tulis Al-Qur'an</h5>
+                  <h5 style = "color: #14781e" >Lancar Baca Tulis Al-Qur'an.</h5>
               </li>
               <li data-aos="fade-up" data-aos-delay="200">
-                  <h5 style = "color: #14781e">Lancar Berbahasa Arab Yaumiyyah</h5>
+                  <h5 style = "color: #14781e">Lancar Berbahasa Arab Yaumiyyah.</h5>
               </li>
               <li data-aos="fade-up" data-aos-delay="300">
-                  <h5 style = "color: #14781e">Pendalaman Nahwu Shorof</h5>
+                  <h5 style = "color: #14781e">Pendalaman Nahwu Shorof.</h5>
               </li>
               <li data-aos="fade-up" data-aos-delay="400">
-                  <h5 style = "color: #14781e">Sorogan Kitab Fiqh dan Nahwu</h5>
+                  <h5 style = "color: #14781e">Sorogan Kitab Fiqh dan Nahwu.</h5>
               </li>
             </ul>
             </p>
