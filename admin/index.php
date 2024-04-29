@@ -24,14 +24,22 @@
     }
 
   </style>
-  <?php
-    session_start();
-    if ($_SESSION["level"] == "") {
-      header("location:../../index.php?pesan=alert");
-    }
+<?php
+session_start();
 
-    include'koneksi.php';
-  ?>
+// Periksa apakah sesi pengguna belum dimulai atau tidak
+if (!isset($_SESSION["username"]) || empty($_SESSION["username"])) {
+  // Jika belum, redirect ke halaman login
+  header("location: ../login.php?pesan=anda-belum-login...");
+  exit(); // Hentikan eksekusi script setelah melakukan redirect
+}
+
+// Jika pengguna sudah login, lanjutkan dengan menampilkan konten admin
+include 'koneksi.php';
+?>
+
+
+
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
@@ -77,7 +85,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index.php" class="brand-link">
-      <span class="brand-text font-weight-light">SMK ASY-SYAMSURIYYAH</span>
+      <span href='../index.php' class="brand-text font-weight-light">SMK ASY-SYAMSURIYYAH</span>
     </a>
 
     <!-- Sidebar -->

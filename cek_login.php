@@ -14,9 +14,8 @@ $cek = mysqli_num_rows($login);
 if ($cek > 0) {
   $data = mysqli_fetch_assoc($login);
   $_SESSION["nama"] = $data["nama"];
-  $_SESSION["level"] = "Pengguna";
-  header("location:index.php");
+  header("location:admin/index.php");
 } else {
-  header("location:index.php?pesan=gagal");
+  header("location:login.php?pesan=gagal");
 }
 ?>

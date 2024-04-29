@@ -81,7 +81,7 @@ if (!$sql) {
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index.html" class="brand-link">
+    <a href="../index.php" class="brand-link">
       <span class="brand-text font-weight-light">SMK ASY-SYAMSURIYYAH</span>
     </a>
 
@@ -121,7 +121,6 @@ if (!$sql) {
                             <thead> <!-- Gunakan tag thead untuk header -->
                                 <tr>
                                     <th>Nama</th>
-                                    <th>Jabatan</th>
                                     <th>Gambar</th>
                                     <th colspan="2">Aksi</th>
                                 </tr>
@@ -130,7 +129,6 @@ if (!$sql) {
                                 <?php while ($data = mysqli_fetch_array($sql)) : ?>
                                     <tr>
                                         <td><?= $data["nama"] ?></td> <!-- Pastikan nama kolom sesuai -->
-                                        <td><?= $data["jabatan"] ?></td> <!-- Pastikan nama kolom sesuai -->
                                         <td><img src="dist/img/uploads/guru<?= $data['gambar'] ?>" alt="gambar" width="200" height="200"></td>
                                         <td><a href="ubah/prestasi_ubah.php?id=<?= $data["id"] ?>"><button type="button" class="btn btn-block btn-primary">Ubah</button></a></td>
                                         <td><a href="hapus-prestasi.php?id=<?= $data["id"] ?>"><button type="button" class="btn btn-block btn-danger">Hapus</button></a></td>

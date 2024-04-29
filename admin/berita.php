@@ -77,7 +77,7 @@ th, td {
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index.html" class="brand-link">
+    <a href="index.php" class="brand-link">
       <span class="brand-text font-weight-light">SMK ASY-SYAMSURIYYAH</span>
     </a>
 
@@ -111,7 +111,7 @@ th, td {
           </div>
           <!-- /.card-header -->
           <p style="font-size: 15pt; margin: 10px 0 10px 0;"></p>
-          <a href="tambah/form_simpan_berita.php"><button class="tombol_tambah" style="margin-bottom: 10px;">Tambah Data</button></a>
+          <a href="tambah-berita.php"><button class="tombol_tambah" style="margin-bottom: 10px;">Tambah Data</button></a>
           <div class="table-responsive">
     <table>
         <tr>

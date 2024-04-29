@@ -126,84 +126,54 @@
     </section><!-- End Breadcrumbs -->
 
     <!-- ======= Team Section ======= -->
-    <section id="team" class="team section-bg">
-      <div class="container" data-aos="fade-up">
+    <?php
+    // Sambungkan ke database Anda di sini
+    include 'koneksi.php';
 
+    // Lakukan query untuk mendapatkan data nama dan gambar dari tabel guru
+    $query = "SELECT nama, gambar FROM guru";
+    // Jalankan query
+    $result = mysqli_query($koneksi, $query);
+?>
+
+<section id="team" class="team section-bg">
+    <div class="container" data-aos="fade-up">
         <div class="section-header">
-          <h3>Profil Guru <span>dan</span> Tenaga Pendidik</h3>
+            <h3>Profil Guru <span>dan</span> Tenaga Pendidik</h3>
         </div>
-
         <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-12 d-flex justify-content-center">
-          </div>
+            <?php
+                // Periksa apakah query berhasil dieksekusi
+                if ($result && mysqli_num_rows($result) > 0) {
+                    // Loop melalui setiap baris hasil query
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        // Tampilkan data sebagai anggota dalam struktur HTML
+            ?>
+<div class="col-lg-3 col-md-6 d-flex align-items-stretch filter-app" data-aos="fade-up" data-aos-delay="100">
+    <div class="member">
+        <div class="member-img">
+            <!-- Tampilkan gambar guru -->
+            <img src="admin/dist/img/uploads/guru<?php echo $row['gambar']; ?>" class="card-img-top" width="300" height="300">
+        </div>
+        <div class="member-info">
+            <!-- Tampilkan nama guru -->
+            <h4><?php echo $row['nama']; ?></h4>
+            <!-- Tambahkan informasi tambahan jika diperlukan -->
+        </div>
+    </div>
 </div>
 
-        <div class="row">
-          
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch filter-app" data-aos="fade-up" data-aos-delay="100">
-            <div class="member">
-              <div class="member-img">
-                <img src="assets/img/testimonial-1.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch filter-app" data-aos="fade-up" data-aos-delay="200">
-            <div class="member">
-              <div class="member-img">
-                <img src="assets/img//testimonial-1.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch filter-card" data-aos="fade-up" data-aos-delay="300">
-            <div class="member">
-              <div class="member-img">
-                <img src="assets/img/testimonial-1.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch filter-card" data-aos="fade-up" data-aos-delay="400">
-            <div class="member">
-              <div class="member-img">
-                <img src="assets/img/testimonial-1.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch filter-card" data-aos="fade-up" data-aos-delay="400">
-            <div class="member">
-              <div class="member-img">
-                <img src="assets/img/testimonial-1.jpg" class="img-fluid" alt="">
-              </div>
-              <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-              </div>
-            </div>
-          </div>
-
+            <?php
+                    }
+                } else {
+                    // Jika query tidak mengembalikan hasil atau tidak berhasil dieksekusi, tampilkan pesan kesalahan atau tindakan yang sesuai
+                    echo "Tidak ada data guru yang ditemukan.";
+                }
+            ?>
         </div>
-
-      </div>
-    </section><!-- End Team Section -->
+    </div>
+</section>
+<!-- End Team Section -->
 
 
     <!-- footer Section -->

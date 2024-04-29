@@ -43,7 +43,8 @@
             <p>
             <strong>Contact Person:</strong> +62 857 4777 791 (M. Hasbi Affandi)<br>
               <strong>Contact Person:</strong> +62 857 0145 379 (Zainul Ma'arif)<br>
-              <strong>Email:</strong> smk.asyamsuriyyah@gmail.com<br>
+
+  <strong>Email:</strong> <a href="mailto:smk.asyamsuriyyah@gmail.com" style="color: #333;">smk.asyamsuriyyah@gmail.com</a>
             </p>
           </div>
         </div>

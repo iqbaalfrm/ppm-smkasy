@@ -4,41 +4,14 @@ if (!isset($_SESSION["level"]) || empty($_SESSION["level"])) {
   header("location:../../index.php?pesan=alert");
   exit(); // penting untuk menghentikan eksekusi kode setelah header
 }
-
-include "koneksi.php";
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // Ambil data yang dikirimkan melalui form
-  $prestasi = $_POST["prestasi"];
-  $tahun = $_POST["tahun"];
-  $deskripsi = $_POST["deskripsi"];
-
-  // Query untuk memasukkan data ke dalam tabel
-  $sql = "INSERT INTO prestasi (prestasi, tahun, deskripsi) VALUES ('$prestasi', '$tahun', '$deskripsi')";
-  $result = mysqli_query($koneksi, $sql);
-  
-
-  if ($result) {
-    header("location: prestasi.php");
-    exit();
-  } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($koneksi);
-  }
-}
 ?>
 
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Admin | Tambah Prestasi</title>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/adminlte.min.css">
-  <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <title>Admin | Tambah Berita</title>
   <style>
     .brand-link {
       display: block;
@@ -48,38 +21,53 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     .brand-text {
       display: inline-block;
     }
+    
+    .nav-link {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-link .menu-text {
+      margin-left: 10px; /* Sesuaikan jarak sesuai kebutuhan */
+    }
 
     .form-group {
-      margin-bottom: 20px;
+      margin-bottom: 1rem;
     }
 
     label {
-      display: block;
-      margin-bottom: 5px;
+      display: inline-block;
+      margin-bottom: 0.5rem;
     }
 
-    input[type="text"], textarea {
+    input[type="text"],
+    textarea {
       width: 100%;
-      padding: 8px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
+      padding: 0.5rem;
+      border: 1px solid #ced4da;
+      border-radius: 0.25rem;
     }
 
-    .tombol_tambah {
-      background-color: #4CAF50;
-      color: white;
-      padding: 10px 20px;
+    .btn-submit {
+      padding: 0.5rem 1rem;
+      background-color: #007bff;
+      color: #fff;
       border: none;
-      border-radius: 4px;
+      border-radius: 0.25rem;
       cursor: pointer;
     }
 
-    .tombol_tambah:hover {
-      background-color: #45a049;
+    .btn-submit:hover {
+      background-color: #0056b3;
     }
 
   </style>
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -101,7 +89,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index.html" class="brand-link">
+    <a href="../index.php" class="brand-link">
       <span class="brand-text font-weight-light">SMK ASY-SYAMSURIYYAH</span>
     </a>
 
@@ -131,30 +119,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <div class="container-fluid">
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">Tambah Prestasi</h3>
+            <h3 class="card-title">Tambah Berita</h3>
           </div>
           <!-- /.card-header -->
           <div class="card-body">
-          <form role="form" method="POST" enctype="multipart/form-data">
-            <div class="card-body">
+            <form action="proses-tambah-berita.php" method="POST" enctype="multipart/form-data">
               <div class="form-group">
-                <label for="nama">Prestasi</label>
-                <input type="text" class="form-control" id="prestasi" name="prestasi" placeholder="Masukkan Nama Prestasi" required>
-              </div>
-              <div class="form-group">
-                <label for="nama">Tahun</label>
-                <input type="text" class="form-control" id="tahun" name="tahun" placeholder="Masukkan Tahun Prestasi" required>
+                <label for="judul">Judul</label>
+                <input type="text" id="judul" name="judul" required>
               </div>
               <div class="form-group">
                 <label for="deskripsi">Deskripsi</label>
-                <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3" placeholder="Masukkan Deskripsi Prestasi" required></textarea>
+                <textarea id="deskripsi" name="deskripsi" rows="4" required></textarea>
               </div>
-            </div>
-
-            <div class="card-footer">
-              <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-          </form>
+              <div class="form-group">
+                <label for="gambar">Gambar</label>
+                <input type="file" id="gambar" name="gambar" accept="image/*" required>
+              </div>
+              <button type="submit" class="btn-submit">Simpan</button>
+            </form>
           </div>
           <!-- /.card-body -->
         </div>
@@ -176,8 +159,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="dist/js/adminlte.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
+<script src="dist/js/adminlte.min.js"></script>
 </body>
 </html>

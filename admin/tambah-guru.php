@@ -11,7 +11,6 @@ include "../koneksi.php";
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Ambil data yang dikirimkan melalui form
   $nama = $_POST["nama"];
-  $jabatan = $_POST["jabatan"];
 
   // Proses upload gambar
   $gambar = null;
@@ -45,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
 
   // Query SQL untuk menyimpan data ke database
-  $query = "INSERT INTO guru (nama, jabatan, gambar) VALUES ('$nama', '$jabatan', '$gambar')";
+  $query = "INSERT INTO guru (nama, gambar) VALUES ('$nama', '$gambar')";
   $result = mysqli_query($koneksi, $query);
 
   if ($result) {
@@ -120,22 +119,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <div class="container-fluid">
         <div class="card">
           <div class="card-header">
-            <h3 class="card-title">Tambah Ekstrakurikuler</h3>
+            <h3 class="card-title">Tambah Data Guru</h3>
           </div>
           <!-- /.card-header -->
           <!-- form start -->
           <form role="form" method="POST" enctype="multipart/form-data">
             <div class="card-body">
               <div class="form-group">
-                <label for="nama">Nama Ekstrakurikuler</label>
-                <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama Ekstrakurikuler" required>
+                <label for="nama">Nama Guru</label>
+                <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama Guru" required>
               </div>
               <div class="form-group">
-                <label for="jabatan">jabatan</label>
-                <textarea class="form-control" id="jabatan" name="jabatan" rows="3" placeholder="Masukkan jabatan" required></textarea>
-              </div>
-              <div class="form-group">
-                <label for="gambar">Gambar</label>
+                <label for="gambar">Foto</label>
                 <input type="file" class="form-control" id="gambar" name="gambar">
               </div>
             </div>

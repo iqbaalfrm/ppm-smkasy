@@ -102,7 +102,7 @@
   ?>
   <div class="kotak_login">
   <h2>
-  <img src="logo.png" alt="Logo" style="width: 150px; height: 150px; vertical-align: middle;">
+  <img src="admin\logo.png" alt="Logo" style="width: 150px; height: 150px; vertical-align: middle;">
 </h2>
     <p class="tulisan_login">Silahkan Login</p>
     <form action="cek_login.php" method="post">

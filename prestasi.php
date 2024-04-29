@@ -9,7 +9,7 @@
   <meta content="" name="description">
   <meta content="" name="keywords">
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/fav2.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Montserrat:300,400,500,600,700" rel="stylesheet">
@@ -25,7 +25,7 @@
   <style>
     table {
       width: 100%;
-      max-width: 1000px; /* Menentukan lebar maksimum tabel */
+      max-width: 1100px; /* Menentukan lebar maksimum tabel */
       border-collapse: collapse;
       margin : 0 auto;
     }
@@ -60,55 +60,52 @@
           </ol>
       </div>
     </section><!-- End Breadcrumbs -->
-    <div class="section-header">
-  <h3>Juara Lomba</h3>
-    </div>
-  <table>
-    <thead>
-      <tr>
-        <th style="text-align: center;">Juara</th>
-        <th style="text-align: center;">Tingkat</th>
-        <th style="text-align: center;">Keterangan</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>Tingkat Kabupaten</td>
-        <td>Juara Tilawatil Qur'an Putra Tahun 2015</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Tingkat Kabupaten</td>
-        <td>Juara Lomba Poster Tahun 2015</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Tingkat Kabupaten</td>
-        <td>Juara Lomba Tari Tahun 2015</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Tingkat Putra Kabupaten Brebes</td>
-        <td>Juara Lomba Poster Dalam Rangka HIV Tahun 2016</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Tingkat Kabupaten</td>
-        <td>Juara Lomba Vokal Tahun 2016</td>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>Lomba Desain Grafis Tingkat SMK SeKabupaten Brebes</td>
-        <td>Juara Lomba Desain Grafis Tahun 2019</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Lomba Desain Grafis Tingkat SMK SeKabupaten Brebes</td>
-        <td>Juara Lomba Desain Grafis Tahun 2020</td>
-      </tr>
-    </tbody>
-  </table>
+    <?php 
+    // Sambungkan ke database Anda di sini
+    include 'koneksi.php';
+
+    // Lakukan query untuk mendapatkan data prestasi
+    $query = "SELECT prestasi,tahun, deskripsi FROM prestasi";
+    // Jalankan query
+    $result = mysqli_query($koneksi, $query);
+
+    // Periksa apakah query berhasil dieksekusi
+    if ($result) {
+      // Jika berhasil, mulai looping untuk menampilkan data dalam tabel
+      ?>
+      <table>
+        <thead>
+          <tr>
+            <th style="text-align: center;">Prestasi</th>
+            <th style="text-align: center;">Tahun</th>
+            <th style="text-align: center;">Deskripsi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php
+            // Loop melalui setiap baris hasil query
+            while ($row = mysqli_fetch_assoc($result)) {
+              // Tampilkan data sebagai baris dalam tabel
+              echo "<tr>";
+              echo "<td style='text-align: center;'>" . $row['prestasi'] . "</td>";
+              echo "<td style='text-align: center;'>" . $row['tahun'] . "</td>";
+              echo "<td style='text-align: center;'>" . $row['deskripsi'] . "</td>";
+              echo "</tr>";
+            }
+          ?>
+        </tbody>
+      </table>
+      <?php
+    } else {
+      // Jika query gagal, tampilkan pesan error
+      echo "Query gagal dieksekusi.";
+    }
+  ?>  
+
+    <!-- footer Section -->
+    <?php include "sections/klien.php"; ?>
+    <!-- Section footer end -->
+
 
   <!-- footer Section -->
   <?php include "footer.php"; ?>
